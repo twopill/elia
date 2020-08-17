@@ -9,7 +9,10 @@ export class HomeComponent {
 
   links: string[]=[
     'raspberry vpn',
-    'instagram'
+    'instagram',
+    'psp go hack',
+    '3ds hack',
+    
   ];
 
   constructor() { }
