@@ -23,11 +23,32 @@ html{
     }
     .black-rectangle{
         display: flex;
-        justify-content: center;
-        align-items: center;
         border: 15px solid black;
         height: 100%;
         width: 100%;
+    }
+    .myfont{
+        font-size: 2rem;
+        position: absolute;
+    }
+    img{
+        position: relative;
+        width: 50%;
+        height: 50%;
+        margin-top: 30%;
+        animation: 10s infinite loopImgRasp
+    }
+}
+
+@keyframes loopImgRasp{
+    0%{
+        transform: rotate3d(1, 1, 1, 25deg);
+    }
+    50%{
+        transform: rotate3d(1, 1, 1, -25deg);
+    }
+    100%{
+        transform: rotate3d(1, 1, 1, 25deg);
     }
 }
 

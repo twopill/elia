@@ -4,6 +4,16 @@ html{
   background-color: black;
 }
 
+.myfont{
+  font-family: 'Roboto', sans-serif;
+  //font-weight: 400;
+//  letter-spacing: 3px;
+}
+
+.spacing{
+  letter-spacing: 3px;
+}
+
 .clickable{
     cursor: pointer;
 }
