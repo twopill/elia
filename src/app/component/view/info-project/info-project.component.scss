@@ -1,7 +1,34 @@
+html{
+    background-color: white;
+}
+
 .bg{
     background-color: #F7D400;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
+}
+
+.up{
+    .white-bg{
+        background-color: white;
+        height: 40vh;
+    }
+    .white-rect{
+        background-color: white;
+        border: 25px solid white;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .black-rectangle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 15px solid black;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .btn-bella-man{

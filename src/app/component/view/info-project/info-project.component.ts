@@ -13,13 +13,13 @@ export class InfoProjectComponent implements OnInit {
 
   show:boolean = false;
 
-  cazz: string[]=[
-    'BELLA A TE MAN',
-    'BELLA A TE MAN','BELLA A TE MAN','BELLA A TE MAN','BELLA A TE MAN',
-    'BELLA A TE MAN','BELLA A TE MAN',
-    'BELLA A TE MAN','BELLA A TE MAN',
-    'BELLA A TE MAN','BELLA A TE MAN','BELLA A TE MAN'
-  ]
+  // cazz: string[]=[
+  //   'BELLA A TE MAN',
+  //   'BELLA A TE MAN','BELLA A TE MAN','BELLA A TE MAN','BELLA A TE MAN',
+  //   'BELLA A TE MAN','BELLA A TE MAN',
+  //   'BELLA A TE MAN','BELLA A TE MAN',
+  //   'BELLA A TE MAN','BELLA A TE MAN','BELLA A TE MAN'
+  // ]
 
   constructor(
     private route: ActivatedRoute,
