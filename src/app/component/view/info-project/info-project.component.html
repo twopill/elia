@@ -11,13 +11,13 @@
 </div>
 
 <div class="bg">
-    <div class="row justify-content-center">
-        <div class="back-btn"></div>
-        <div class="back-btn-out"></div>
-        <div class="back-btn"></div>
-        <div class="back-btn-out"></div>
-        <div class="back-btn"></div>
-        
+    <div class="row justify-content-start p-0 m-0">
+        <div [routerLink]="['/home']" routerLinkActive="router-link-active" >
+            <svg id="arrow-two" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3.4" y="5.7" class="line"/>
+              <path class="chevron" d="M6.9,12.7l-5.5-6l5.5-6"/>
+            </svg>
+          </div>
     </div>
     <div class="down">
         <h1 style="color:black" class="txt">{{text}}</h1>

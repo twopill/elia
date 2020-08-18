@@ -35,7 +35,7 @@ html{
         position: relative;
         width: 50%;
         height: 50%;
-        margin-top: 30%;
+        //margin-top: 0%;
         animation: 10s infinite loopImgRasp
     }
 }
@@ -52,30 +52,8 @@ html{
     }
 }
 
-.btn-bella-man{
-    background-color: black;
-    color: #F7D400;
-    width: 150px;
-    height: 60px;
-    font-size: 1.5rem;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.btn-bella-man:hover{
-    animation: 2s ciaoCiao forwards;
-}
 
-@keyframes ciaoCiao{
-    0%{
-
-    }
-    100%{
-        opacity: 0;
-    }
-}
 
 .down{
     padding: 10%;
@@ -92,28 +70,49 @@ html{
 }
 
 
-.back-btn{
-    width: 50px;
-    height: 50px;
-    box-shadow: inset 1px 2px 2px #6e6e6e;
-    border-radius: 50px;
-    margin-left: 5%;
-    margin-top: 2%;
+#arrow-two {
+    margin-left: 9%;
+    height: 12px;
+    
+    .chevron {
+      fill: none;
+      stroke: #5A5351; 
+      stroke-width: 2;
+    }
+    .line {
+      fill: #5A5351;
+      width: 41px;
+      height: 2px;
+      transition: width 0.3s ease-in;
+      animation: 1s 1s forwards arrowInitial ease-in-out;
+    }
+    &:hover {
+      cursor: pointer;
+      .line {
+        
+        width: 70px;
+      }
+    }
 }
 
-.back-btn:active{
-    box-shadow:  1px 2px 2px #6e6e6e;
+@keyframes arrowInitial{
+    0%{
+
+    }
+    50%{
+        
+        width: 70px;
+         
+    }
+    100%{
+
+    }
 }
 
-.back-btn-out{
-    width: 50px;
-    height: 50px;
-    box-shadow:  1px 2px 2px #6e6e6e;
-    border-radius: 50px;
-    margin-left: 5%;
-    margin-top: 2%;
-}
+@media screen and (min-width: 280px) and (max-width: 395px) {
 
-.back-btn-out:active{
-    box-shadow: inset 1px 2px 2px #6e6e6e;
+    img{
+        margin-top: 30%;
+    }
+
 }
