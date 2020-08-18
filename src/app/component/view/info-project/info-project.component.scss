@@ -1,0 +1,30 @@
+.bg{
+    background-color: #F7D400;
+    height: 100vh;
+    width: 100%;
+}
+
+.btn-bella-man{
+    background-color: black;
+    color: #F7D400;
+    width: 150px;
+    height: 60px;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-bella-man:hover{
+    animation: 2s ciaoCiao forwards;
+}
+
+@keyframes ciaoCiao{
+    0%{
+
+    }
+    100%{
+        opacity: 0;
+    }
+}

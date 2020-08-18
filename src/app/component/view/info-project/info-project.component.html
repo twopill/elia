@@ -1,3 +1,16 @@
-<div class="bg-light">
+<div class="bg">
     <h1 style="color:black">{{text}}</h1>
+    <div class="row d-flex justify-content-center p-5">
+        <div class="btn-bella-man" (click)="show=!show">
+            click
+        </div>
+        <ng-container *ngIf="show">
+        
+        <div class="d-flex justify-content-center" style="color:black" *ngFor="let item of cazz" >
+            {{item}}
+        </div>
+    </ng-container>
+    </div>
+    
+
 </div>
