@@ -12,8 +12,19 @@ export class HomeComponent {
     'instagram',
     'psp go hack',
     '3ds hack',
-    
+
   ];
+
+  nLinks: object[]=[
+    {
+      name: 'raspberry vpn',
+      id: '0'
+    },
+    {
+      name: 'psp go hack',
+      id: '1'
+    }
+  ]
 
   constructor() { }
 
