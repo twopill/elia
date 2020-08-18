@@ -143,10 +143,19 @@ html{
     }
 }
 
-@media screen and (min-width: 280px) and (max-width: 395px) {
+@media screen and (min-width: 280px) and (max-width: 445px) {
 
     img{
         margin-top: 30%;
     }
 
 }
+
+@media screen and (min-width: 220px) and (max-width: 335px){
+    .up{
+        .myfont{
+            font-size: 1.5rem;
+            position: absolute;
+        }
+    }
+} 
