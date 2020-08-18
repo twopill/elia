@@ -8,8 +8,8 @@ export class PageService {
   //raspPage = require("./mock-data/rasp-page.json");
 
   public text: string[] = [
-    'Ciao sono un raspberry',
-    "Ciao sono una psp"
+    'il progetto nasce con la necessità di testo a caso wewe tutu nabrabab',
+    "la psp è bellissima con la necessità di testo a caso wewe tutu nabrabab"
   ]
 
   constructor() { }

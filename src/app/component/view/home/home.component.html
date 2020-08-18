@@ -3,7 +3,7 @@
     <!-- HEADER -->
     <div class="row m-0 py-5 ">
       <div class="col-6 ">
-        <h5 class="myfont-normal noselect">ELIA
+        <h5 class="myfont noselect">ELIA
           <div class="u-2"></div>
         </h5>
       </div>
@@ -24,10 +24,10 @@
           </h5>
 
           <div class="row py-2 m-0" *ngFor="let link of nLinks; let i = index">
-            <h5 class="text-uppercase myfont-normal no-wrap clickable links noselect" 
+            <h4 class="text-uppercase myfont-normal no-wrap clickable links noselect" 
             [routerLink]="['/info-project',link.id,link.name]" routerLinkActive="router-link-active"
             >{{link.name}}
-            </h5>
+            </h4>
           </div>
         </div>
       </div>

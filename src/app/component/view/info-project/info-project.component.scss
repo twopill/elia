@@ -76,3 +76,44 @@ html{
         opacity: 0;
     }
 }
+
+.down{
+    padding: 10%;
+    .txt{
+        font-size: 1rem;
+    }
+}
+
+.turn-back-btn{
+    width: 50%;
+    height: 50%;
+    border-radius: 50px;
+    background-color: black;
+}
+
+
+.back-btn{
+    width: 50px;
+    height: 50px;
+    box-shadow: inset 1px 2px 2px #6e6e6e;
+    border-radius: 50px;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.back-btn:active{
+    box-shadow:  1px 2px 2px #6e6e6e;
+}
+
+.back-btn-out{
+    width: 50px;
+    height: 50px;
+    box-shadow:  1px 2px 2px #6e6e6e;
+    border-radius: 50px;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.back-btn-out:active{
+    box-shadow: inset 1px 2px 2px #6e6e6e;
+}
