@@ -10,7 +10,7 @@ import { PageService } from "../../../service/page.service"
 export class InfoProjectComponent implements OnInit {
 
   text: string = '';
-
+  title: string = '';
   show:boolean = false;
 
   // cazz: string[]=[
@@ -28,7 +28,10 @@ export class InfoProjectComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
+    const title = this.route.snapshot.paramMap.get('name');
+    
     this.text = this.pageService.getPage(id);
+    this.title = this.pageService.getTitle(title);
   }
 
 }

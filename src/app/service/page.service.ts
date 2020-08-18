@@ -19,7 +19,10 @@ export class PageService {
       if(id == i) return this.text[i]
       else console.log('## testo non trovato ##')
     }
+  }
 
+  getTitle(title){
+    return title;
   }
 
 }
