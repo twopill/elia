@@ -8,11 +8,45 @@ html{
     width: 100vw;
 }
 
-.up{
-    .white-bg{
-        background-color: white;
+.white-bg-2{
+    background-color: white;
+    //height: 15vh;
+    //position: fixed;
+    animation: 2s forwards closeRectangle ease-out;
+    
+
+}
+
+.img-fade-out{
+    //display: none;
+    animation: 2s forwards closeImg ease-out;
+}
+
+@keyframes closeRectangle{
+    0%{
         height: 40vh;
     }
+    100%{
+        height: 16vh;
+    }
+}
+
+@keyframes closeImg{
+    0%{
+
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.white-bg{
+    background-color: white;
+    
+}
+
+.up{
+    background-color: white;
     .white-rect{
         background-color: white;
         border: 25px solid white;
