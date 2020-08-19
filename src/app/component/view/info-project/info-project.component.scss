@@ -1,199 +1,212 @@
-html{
-    background-color: white;
+html {
+  background-color: white;
 }
 
-.bg{
-    background-color: #F7D400;
-    height: 150vh;
-    width: 100vw;
+.bg {
+  background-color: #F7D400;
+  height: 150vh;
+  width: 100vw;
 }
 
-.white-bg-2{
-    background-color: white;
-    //height: 15vh;
-    //position: fixed;
-    animation: 2s forwards closeRectangle ease-out;
-    
+.white-bg-2 {
+  background-color: white;
+  //height: 15vh;
+  //position: fixed;
+  animation: 2s forwards closeRectangle ease-out;
+
 
 }
+
 //<div class="" [ngClass]="{'white-bg-2': header_var}" >
-.img-fade-out{
-    //display: none;
-    animation: 2s forwards closeImg ease-out;
+.img-fade-out {
+  //display: none;
+  animation: 2s forwards closeImg ease-out;
 }
 
-@keyframes closeRectangle{
-    0%{
-        height: 40vh;
-    }
-    100%{
-        height: 16vh;
-    }
+@keyframes closeRectangle {
+  0% {
+    height: 40vh;
+  }
+
+  100% {
+    height: 16vh;
+  }
 }
 
-@keyframes openRectangle{
-    0%{
-        height: 16vh;
-    }
-    100%{
-        height: 40vh;
-    }
+@keyframes openRectangle {
+  0% {
+    height: 16vh;
+  }
+
+  100% {
+    height: 40vh;
+  }
 }
 
-@keyframes closeImg{
-    0%{
+@keyframes closeImg {
+  0% {}
 
-    }
-    100%{
-        opacity: 0;
-    }
+  100% {
+    opacity: 0;
+  }
 }
 
-.white-bg{
+.white-bg {
+  background-color: white;
+  //animation: 2s forwards closeImg ease-in;
+}
+
+.up {
+  background-color: white;
+
+  .white-rect {
     background-color: white;
-    //animation: 2s forwards closeImg ease-in;
-}
+    border: 25px solid white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.up{
-    background-color: white;
-    .white-rect{
-        background-color: white;
-        border: 25px solid white;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .black-rectangle{
-        display: flex;
-        border: 15px solid black;
-        height: 100%;
-        width: 100%;
-    }
-    .myfont{
-        font-size: 2rem;
-        position: absolute;
-    }
-    img{
-        position: relative;
-        width: 50%;
-        height: 50%;
-        //margin-top: 0%;
-        animation: 10s infinite loopImgRasp
-    }
-}
+  .black-rectangle {
+    display: flex;
+    border: 15px solid black;
+    height: 100%;
+    width: 100%;
+  }
 
-.img-test{
+  .myfont {
+    font-size: 2rem;
+    position: absolute;
+  }
+
+  img {
     position: relative;
     width: 50%;
     height: 50%;
+    //margin-top: 0%;
     animation: 10s infinite loopImgRasp
+  }
 }
 
-@keyframes loopImgRasp{
-    0%{
-        transform: rotate3d(1, 1, 1, 25deg);
-    }
-    50%{
-        transform: rotate3d(1, 1, 1, -25deg);
-    }
-    100%{
-        transform: rotate3d(1, 1, 1, 25deg);
-    }
+.img-test {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  animation: 10s infinite loopImgRasp
+}
+
+@keyframes loopImgRasp {
+  0% {
+    transform: rotate3d(1, 1, 1, 25deg);
+  }
+
+  50% {
+    transform: rotate3d(1, 1, 1, -25deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 1, 1, 25deg);
+  }
 }
 
 
 
 
-.down{
-    padding: 10%;
-    .txt{
-        color:black;
-        font-size: 1rem;
-    }
-    .txt-title{
-        font-weight: 700;
-    }
-    .txt-desc{
-        font-weight: 400;
-        
-        
-    }
-    .work{
-        border: 2px dotted;
-    }
-    
+.down {
+
+  //padding: 10%;
+  .txt {
+    color: black;
+    font-size: 1rem;
+  }
+
+  .txt-title {
+    font-weight: 700;
+  }
+
+  .txt-desc {
+    font-weight: 400;
+
+
+  }
+
+  .work {
+    border: 2px dotted;
+  }
+
 }
 
-.external-down{
-    img{
-        margin: 0;
-        width: 100%;
-        height: 20%;
-    }
+.external-down {
+  img {
+    margin: 0;
+    width: 100%;
+    height: 20%;
+  }
 }
 
-.turn-back-btn{
-    width: 50%;
-    height: 50%;
-    border-radius: 50px;
-    background-color: black;
+.turn-back-btn {
+  width: 50%;
+  height: 50%;
+  border-radius: 50px;
+  background-color: black;
 }
 
 
 #arrow-two {
-    margin-left: 9%;
-    height: 12px;
-    
-    .chevron {
-      fill: none;
-      stroke: #5A5351; 
-      stroke-width: 2;
-    }
+  margin-left: 9%;
+  height: 12px;
+
+  .chevron {
+    fill: none;
+    stroke: #5A5351;
+    stroke-width: 2;
+  }
+
+  .line {
+    fill: #5A5351;
+    width: 41px;
+    height: 2px;
+    transition: width 0.3s ease-in;
+    animation: 1s 1s forwards arrowInitial ease-in-out;
+  }
+
+  &:hover {
+    cursor: pointer;
+
     .line {
-      fill: #5A5351;
-      width: 41px;
-      height: 2px;
-      transition: width 0.3s ease-in;
-      animation: 1s 1s forwards arrowInitial ease-in-out;
+
+      width: 70px;
     }
-    &:hover {
-      cursor: pointer;
-      .line {
-        
-        width: 70px;
-      }
-    }
+  }
 }
 
-@keyframes arrowInitial{
-    0%{
+@keyframes arrowInitial {
+  0% {}
 
-    }
-    50%{
-        
-        width: 70px;
-         
-    }
-    100%{
+  50% {
 
-    }
+    width: 70px;
+
+  }
+
+  100% {}
 }
 
 @media screen and (min-width: 280px) and (max-width: 445px) {
 
-    .img-test{
-        margin-top: 30%;
-        margin-bottom: 5%;
-    }
+  .img-test {
+    margin-top: 30%;
+    margin-bottom: 5%;
+  }
 
 }
 
-@media screen and (min-width: 220px) and (max-width: 360px){
-    .up{
-        .myfont{
-            font-size: 1.5rem;
-            position: absolute;
-        }
+@media screen and (min-width: 220px) and (max-width: 360px) {
+  .up {
+    .myfont {
+      font-size: 1.5rem;
+      position: absolute;
     }
-} 
+  }
+}
