@@ -87,7 +87,6 @@ html{
     position: relative;
     width: 50%;
     height: 50%;
-    box-shadow: -11px 10px 16px 0px #5a5a5a5c, 10px -11px 5px 0px #ffffff5c;
     animation: 10s infinite loopImgRasp
 }
 
@@ -117,6 +116,11 @@ html{
     }
     .txt-desc{
         font-weight: 400;
+        
+        
+    }
+    .work{
+        border: 2px dotted;
     }
     
 }
@@ -185,7 +189,7 @@ html{
 
 }
 
-@media screen and (min-width: 220px) and (max-width: 335px){
+@media screen and (min-width: 220px) and (max-width: 360px){
     .up{
         .myfont{
             font-size: 1.5rem;
