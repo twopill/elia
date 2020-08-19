@@ -4,7 +4,7 @@ html{
 
 .bg{
     background-color: #F7D400;
-    height: 100vh;
+    height: 150vh;
     width: 100vw;
 }
 
@@ -16,7 +16,7 @@ html{
     
 
 }
-
+//<div class="" [ngClass]="{'white-bg-2': header_var}" >
 .img-fade-out{
     //display: none;
     animation: 2s forwards closeImg ease-out;
@@ -31,6 +31,15 @@ html{
     }
 }
 
+@keyframes openRectangle{
+    0%{
+        height: 16vh;
+    }
+    100%{
+        height: 40vh;
+    }
+}
+
 @keyframes closeImg{
     0%{
 
@@ -42,7 +51,7 @@ html{
 
 .white-bg{
     background-color: white;
-    
+    //animation: 2s forwards closeImg ease-in;
 }
 
 .up{
@@ -92,7 +101,14 @@ html{
 .down{
     padding: 10%;
     .txt{
+        color:black;
         font-size: 1rem;
+    }
+    .txt-title{
+        font-weight: 700;
+    }
+    .txt-desc{
+        font-weight: 400;
     }
 }
 

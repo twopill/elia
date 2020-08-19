@@ -1,38 +1,39 @@
-<div class="up">
-    <div class="" [ngClass]="{'white-bg-2': header_var}" >
-        <div class="white-rect" >
-        <div class="black-rectangle py-2 px-2 d-flex justify-content-center">
-            <h4 class="myfont text-uppercase spacing">{{title}}</h4>
-            <img src="../../../../assets/pi.png" alt="" srcset=""  [ngStyle]="{'animation': animation}">
-        </div>
-    </div>
-    </div>
-</div>
-
 <div class="bg">
-    <div class="row justify-content-start p-0 m-0">
-        <div [routerLink]="['/home']" routerLinkActive="router-link-active" >
-            <svg id="arrow-two" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3.4" y="5.7" class="line"/>
-              <path class="chevron" d="M6.9,12.7l-5.5-6l5.5-6"/>
-            </svg>
-          </div>
+  <div class="up">
+    <div class="white-bg " >
+      <div class="white-rect">
+        <div class="black-rectangle py-2 px-2 d-flex justify-content-center">
+          <h4 class="myfont text-uppercase spacing">{{title}}</h4>
+          <img src="../../../../assets/pi.png" alt="" srcset="" >
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="">
+
     <div class="down">
-        <h1 style="color:black" class="txt">{{text}}</h1>
+      <div class="row m-0 p-0">
+        <h1 class="txt robotoMono txt-title">status: </h1>
+        <h1 class="txt robotoMono px-3 txt-desc">in progress</h1>
+      </div>
+      <div class="row m-0 p-0">
+        <h1 class="txt robotoMono txt-title">work: </h1>
+        <h1 class="txt robotoMono txt-desc">{{text}}</h1>
+      </div>
+
     </div>
-    
+
     <!--<div class="row d-flex justify-content-center p-5">
          <div class="btn-bella-man" (click)="show=!show">
             click
         </div> -->
-        <!-- <ng-container *ngIf="show">
+    <!-- <ng-container *ngIf="show">
         
         <div class="d-flex justify-content-center" style="color:black" *ngFor="let item of cazz" >
             {{item}}
         </div>
     </ng-container> 
     </div>-->
-    
-
+  </div>
 </div>

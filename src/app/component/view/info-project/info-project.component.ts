@@ -14,15 +14,8 @@ export class InfoProjectComponent implements OnInit {
   
   show:boolean = false;
 
-  animation: string ='animation: 10s infinite loopImgRasp'
-
-  // cazz: string[]=[
-  //   'BELLA A TE MAN',
-  //   'BELLA A TE MAN','BELLA A TE MAN','BELLA A TE MAN','BELLA A TE MAN',
-  //   'BELLA A TE MAN','BELLA A TE MAN',
-  //   'BELLA A TE MAN','BELLA A TE MAN',
-  //   'BELLA A TE MAN','BELLA A TE MAN','BELLA A TE MAN'
-  // ]
+  animation: string ='';
+  animation_rect: string = '2s forwards openRectangle ease-in';
 
   constructor(
     private route: ActivatedRoute,
@@ -39,24 +32,17 @@ export class InfoProjectComponent implements OnInit {
 
   header_var = false;
   @HostListener("document:scroll")
-  // calcScrollY():string{
-  //   let numberY = 40 - 10;
-  //   let parse = numberY.toString()
-  //   //console.log(parse)
-  //   return 'height:'+parse+'vh'
-  // }
-  // `
+
   scrollFunction(){
     if(document.body.scrollTop > 0 || document.documentElement.scrollTop > 0){
-      //console.log(document.documentElement.scrollTop)
       this.header_var = true;
-      
-      this.animation = 'animation: 2s forwards closeImg ease-out'
-      //this.scroll = 'height: 15vh'
+      this.animation = '2s forwards closeImg ease-out'
+      this.animation_rect = '2s forwards closeRectangle ease-out'
     }else 
       {
         this.header_var = false;
-        this.animation = 'animation: 10s infinite loopImgRasp'
+        this.animation = '10s infinite loopImgRasp'
+        this.animation_rect = '2s forwards openRectangle ease-in'
       }  
   }
 
