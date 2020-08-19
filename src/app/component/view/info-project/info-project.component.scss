@@ -83,6 +83,14 @@ html{
     }
 }
 
+.img-test{
+    position: relative;
+    width: 50%;
+    height: 50%;
+    box-shadow: -11px 10px 16px 0px #5a5a5a5c, 10px -11px 5px 0px #ffffff5c;
+    animation: 10s infinite loopImgRasp
+}
+
 @keyframes loopImgRasp{
     0%{
         transform: rotate3d(1, 1, 1, 25deg);
@@ -170,8 +178,9 @@ html{
 
 @media screen and (min-width: 280px) and (max-width: 445px) {
 
-    img{
+    .img-test{
         margin-top: 30%;
+        margin-bottom: 5%;
     }
 
 }
