@@ -1,3 +1,5 @@
+$giallo : #F7D400;
+
 html {
   background-color: white;
 }
@@ -68,14 +70,20 @@ html {
     align-items: center;
   }
 
+  .evidenziatore {
+    background-color: $giallo;
+  }
+
   .black-rectangle {
     display: flex;
     border: 15px solid black;
     height: 100%;
     width: 100%;
+    border-radius: .25em;
   }
 
   .myfont {
+    background-color: $giallo;
     font-size: 2rem;
     position: absolute;
   }
@@ -246,4 +254,47 @@ html {
   // color: white;
 
   transform: rotateX(180deg);
+}
+
+.breadcrumb>h2,
+ul {
+  display: inline-flex;
+  list-style: none;
+  font-size: initial;
+  color: #270215;
+}
+
+.breadcrumb ul>li+li {
+  margin-left: 5px;
+}
+
+.breadcrumb ul>li a[href] {
+  text-decoration: none;
+  position: relative;
+  font-weight: 400;
+  color: gray;
+  z-index: 0;
+}
+
+.breadcrumb ul>li a[href]:hover,
+.breadcrumb ul>li a[href]:focus {
+  color: #C41C87;
+  outline: none;
+}
+
+.breadcrumb ul>li a[href]:hover:before,
+.breadcrumb ul>li a[href]:focus:before {
+  transform: skew(-3deg) rotate(-1deg);
+  border-bottom: 13px solid #D6DBD2;
+  left: -3px;
+  right: 2px;
+  position: absolute;
+  bottom: -1px;
+  content: "";
+  z-index: -1;
+}
+
+.breadcrumb ul>li a:not([href]) {
+  font-weight: bold;
+  color: #2C363F;
 }

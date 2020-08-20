@@ -34,6 +34,10 @@ export class InfoProjectComponent implements OnInit {
     return this.img.toString();
   }
 
+  navigateBack() {
+    window.history.back();
+  }
+
   header_var = false;
   @HostListener('document:scroll')
   scrollFunction() {
