@@ -298,3 +298,10 @@ ul {
   font-weight: bold;
   color: #2C363F;
 }
+
+.img-background {
+  background-image: url("../../../../assets/rasp-test.png");
+  opacity: 20%;
+  z-index: 0;
+  position: absolute;
+}

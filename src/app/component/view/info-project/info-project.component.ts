@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PageService } from '../../../service/page.service';
+import { SafePipeModule } from 'safe-pipe';
 
 @Component({
   selector: 'app-info-project',
@@ -10,7 +11,7 @@ import { PageService } from '../../../service/page.service';
 export class InfoProjectComponent implements OnInit {
   text: string;
   title: string = '';
-  img: string = '../../../../assets/pi_svg.svg';
+  img: string = '';
   show: boolean = false;
 
   animation: string = '';
