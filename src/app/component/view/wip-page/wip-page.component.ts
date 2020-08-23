@@ -10,10 +10,9 @@ export class WipPageComponent implements OnInit {
   constructor(private route: Router) {}
 
   ngOnInit(): void {
-    //let test = this.route.navigate(['/home']);
     setTimeout(() => {
       this.route.navigate(['/home']);
-    }, 2000);
+    }, 5000);
   }
 
   navigateBack() {

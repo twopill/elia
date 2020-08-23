@@ -75,7 +75,24 @@ html {
 .myfont {
 
   h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    background-color: $giallo;
+  }
+}
 
+.progress-line {
+  position: absolute;
+  border-bottom: 5px dotted black;
+
+  animation: 5s infinite progressBar ease-in;
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 69%;
   }
 }

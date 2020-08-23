@@ -14,10 +14,9 @@ var WipPageComponent = /** @class */ (function () {
     }
     WipPageComponent.prototype.ngOnInit = function () {
         var _this = this;
-        //let test = this.route.navigate(['/home']);
         setTimeout(function () {
             _this.route.navigate(['/home']);
-        }, 2000);
+        }, 5000);
     };
     WipPageComponent.prototype.navigateBack = function () {
         return this.route.navigate(['/home']);
