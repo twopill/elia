@@ -17,8 +17,8 @@ var PageService = /** @class */ (function () {
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
         ];
         this.img = [
-            '../../../../assets/pi_svg.svg',
-            '../../../../assets/psp.svg',
+            '../../../../assets/pi.png',
+            '../../../../assets/psp.png',
         ];
         this.text_obj = [
             {
@@ -35,7 +35,7 @@ var PageService = /** @class */ (function () {
     }
     PageService.prototype.getPage = function (id) {
         for (var i = 0; i <= this.text.length; i++) {
-            if (id == 0)
+            if (id == 0 || 1)
                 return this.text[i];
             else
                 this.route.navigate(['/wip']);

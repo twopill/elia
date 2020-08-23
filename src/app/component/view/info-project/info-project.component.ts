@@ -11,7 +11,7 @@ import { SafePipeModule } from 'safe-pipe';
 export class InfoProjectComponent implements OnInit {
   text: string;
   title: string = '';
-  img: string = '';
+  img: any = '../../../../assets/pi.png';
   show: boolean = false;
 
   animation: string = '';

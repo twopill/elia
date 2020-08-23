@@ -13,8 +13,8 @@ export class PageService {
   ];
 
   public img: string[] = [
-    '../../../../assets/pi_svg.svg',
-    '../../../../assets/psp.svg',
+    '../../../../assets/pi.png',
+    '../../../../assets/psp.png',
   ];
 
   public text_obj: any[] = [
@@ -36,7 +36,7 @@ export class PageService {
 
   getPage(id) {
     for (let i = 0; i <= this.text.length; i++) {
-      if (id == 0) return this.text[i];
+      if (id == 0 || 1) return this.text[i];
       else this.route.navigate(['/wip']);
       console.log('## testo non trovato ##');
     }
