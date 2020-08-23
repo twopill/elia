@@ -35,7 +35,9 @@ var PageService = /** @class */ (function () {
     }
     PageService.prototype.getPage = function (id) {
         for (var i = 0; i <= this.text.length; i++) {
-            if (id == 0 || 1)
+            if (id == 0)
+                return this.text[i];
+            else if (id == 1)
                 return this.text[i];
             else
                 this.route.navigate(['/wip']);

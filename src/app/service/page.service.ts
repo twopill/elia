@@ -36,7 +36,8 @@ export class PageService {
 
   getPage(id) {
     for (let i = 0; i <= this.text.length; i++) {
-      if (id == 0 || 1) return this.text[i];
+      if (id == 0) return this.text[i];
+      else if (id == 1) return this.text[i];
       else this.route.navigate(['/wip']);
       console.log('## testo non trovato ##');
     }
