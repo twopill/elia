@@ -25,25 +25,6 @@ html {
   border-radius: 25px;
 }
 
-.noise-pos .noise {
-  background-color: black;
-  width: 5px;
-  position: absolute;
-  bottom: 50%;
-  height: 15px;
-  border-radius: 5px;
-}
-.noise-pos .noise-2 {
-  height: 5px;
-  width: 10px;
-  background-color: black;
-  position: absolute;
-  bottom: 50%;
-  left: 48%;
-  border-radius: 5px;
-  transform: rotate3d(1, 2, 1, 9deg);
-}
-
 .mouth-pos .mouth {
   background-color: black;
   width: 8px;
