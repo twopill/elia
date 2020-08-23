@@ -38,3 +38,6 @@ html {
     transform: scale(1.5);
   }
 }
+.myfont h1 {
+  font-size: 1rem;
+}

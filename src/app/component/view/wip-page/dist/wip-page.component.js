@@ -12,9 +12,15 @@ var WipPageComponent = /** @class */ (function () {
     function WipPageComponent(route) {
         this.route = route;
     }
-    WipPageComponent.prototype.ngOnInit = function () { };
+    WipPageComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        //let test = this.route.navigate(['/home']);
+        setTimeout(function () {
+            _this.route.navigate(['/home']);
+        }, 2000);
+    };
     WipPageComponent.prototype.navigateBack = function () {
-        this.route.navigate(['/home']);
+        return this.route.navigate(['/home']);
     };
     WipPageComponent = __decorate([
         core_1.Component({

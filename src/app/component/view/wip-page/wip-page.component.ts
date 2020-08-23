@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { delay } from 'rxjs/operators';
 @Component({
   selector: 'app-wip-page',
   templateUrl: './wip-page.component.html',
@@ -9,9 +9,14 @@ import { Router } from '@angular/router';
 export class WipPageComponent implements OnInit {
   constructor(private route: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    //let test = this.route.navigate(['/home']);
+    setTimeout(() => {
+      this.route.navigate(['/home']);
+    }, 2000);
+  }
 
   navigateBack() {
-    this.route.navigate(['/home']);
+    return this.route.navigate(['/home']);
   }
 }
