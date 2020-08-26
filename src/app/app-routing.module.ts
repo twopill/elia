@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'info-project/:id/:name', component: InfoProjectComponent },
   { path: 'wip', component: WipPageComponent },
   { path: 'error', component: ErrorPageComponent },
+  { path: '**', component: ErrorPageComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
