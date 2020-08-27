@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent {
   links: string[] = ['raspberry vpn', 'instagram', 'psp go hack', '3ds hack'];
 
+  social: string[] = ['github', 'instagram', 'reddit'];
+
   nLinks: object[] = [
     {
       name: 'raspberry vpn',

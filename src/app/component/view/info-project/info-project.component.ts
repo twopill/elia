@@ -9,7 +9,9 @@ import { SafePipeModule } from 'safe-pipe';
   styleUrls: ['./info-project.component.scss'],
 })
 export class InfoProjectComponent implements OnInit {
-  text: string;
+  textFirst: string;
+  textSecond: string;
+
   title: string = '';
   img: any = '../../../../assets/pi.png';
   show: boolean = false;
@@ -26,9 +28,14 @@ export class InfoProjectComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     const title = this.route.snapshot.paramMap.get('name');
 
-    this.text = this.pageService.getPage(id);
+    this.textFirst = this.pageService.getTextFirst(id);
+    this.textSecond = this.pageService.getTextSecond(id);
     this.img = this.pageService.getImg(id);
     this.title = this.pageService.getTitle(title);
+
+    if (this.textSecond == undefined) {
+      this.show = !this.show;
+    }
   }
 
   getUrl() {
