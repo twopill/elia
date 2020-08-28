@@ -9,7 +9,7 @@ import { ErrorPageComponent } from './component/view/error-page/error-page.compo
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'about-me', component: AboutComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'info-project/:id/:name', component: InfoProjectComponent },
   { path: 'wip', component: WipPageComponent },
   { path: 'error', component: ErrorPageComponent },
