@@ -13,15 +13,22 @@
   </div>
 
   <div class="down p-4">
+    <div class="row w-100 m-0 p-0">
+      <div class="w-100">
+
+        <nav class="breadcrumb d-flex justify-content-center" style="background-color: white;">
+
+          <ul id="navlist" class=" p-0 m-0">
+            <li class="font-weight-bold pl">You are here:
+            </li>
+            <li (click)="navigateBack()"><a href="/">home</a> →</li>
+            <li><a>{{ title }}</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <div class="row m-0 p-0">
-      <nav class="breadcrumb" style="background-color: white;">
-        <h2>You are here:</h2>
-        <ul id="navlist">
-          <li (click)="navigateBack()"><a href="/">home</a> →</li>
-          <li (click)="navigateBack()"><a href="/products/">project</a> →</li>
-          <li><a>{{ title }}</a></li>
-        </ul>
-      </nav>
+
       <h1 class="txt robotoMono txt-title">status:</h1>
       <h1 class="txt robotoMono px-3 txt-desc">in progress</h1>
     </div>

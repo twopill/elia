@@ -1,5 +1,5 @@
 .bg {
-  background-color: #F7D400;
+  background-color: #f7d400;
   height: 100vh;
   width: 100%;
 }
@@ -14,17 +14,19 @@
 }
 
 @keyframes rotateSchedule {
-  0% {}
+  0% {
+  }
 
   50% {
     transform: rotate3d(-21, 93, 52, 142deg);
   }
 
-  100% {}
+  100% {
+  }
 }
 
 .myfont-normal {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   letter-spacing: 3px;
 
@@ -33,7 +35,6 @@
     width: 30%;
     background-color: black;
   }
-
 }
 
 .bg-rgba {
@@ -42,7 +43,8 @@
 }
 
 .center {
-  .link {}
+  .link {
+  }
 }
 
 .u {
@@ -53,21 +55,18 @@
 
 .links:hover {
   animation: 0.2s forwards fadeOpacityIn;
-
 }
 
 .links:active {
   animation: 0.2s forwards fadeOpacityIn;
 }
 
-
-.bottom {}
-
-
-
+.bottom {
+}
 
 @keyframes fadeOpacityIn {
-  0% {}
+  0% {
+  }
 
   100% {
     background-color: blue;
@@ -75,70 +74,14 @@
   }
 }
 
-
-
 @media screen and (min-width: 700px) and (max-width: 10920px) {
-
-
   .bg {
-    background-color: #F7D400;
-
+    background-color: #f7d400;
   }
-
 
   .force-mobile {
     position: absolute;
     width: 45%;
     left: 28%;
-
-  }
-
-}
-
-$c1:rgb(10, 10, 10);
-$c2:#141414;
-$c3:radial-gradient(circle at center, rgb(32, 32, 32), rgb(31, 31, 31)48, 48, 48);
-
-
-
-svg {
-  width: 100px;
-  height: 100px;
-  display: block;
-  margin: 50px auto 20px;
-
-  path {
-    fill: none;
-
-    stroke: $c1 {
-      width: 7px;
-    }
-  }
-
-  .color {
-    stroke: #1d1d1d;
-  }
-
-  //touch
-  .touch {
-    path {
-      stroke: #FF8888 {
-        dashoffset: 285;
-        dasharray: 284;
-      }
-
-      transition: all cubic-bezier(0.42, 0, 0.14, 0.43) .8s;
-    }
-
-    .color {
-      stroke: lighten(#FF8888, 15%);
-    }
-  }
-
-  &:active .touch {
-    path {
-      transition: all linear 1.4s;
-      stroke-dashoffset: 0;
-    }
   }
 }
