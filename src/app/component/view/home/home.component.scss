@@ -4,26 +4,7 @@
   width: 100%;
 }
 
-.schedule {
-  //transform: rotate3d(1, 1, 1, 34deg);
-  box-shadow: 5px 7px 9px #0000007a;
-}
 
-.schedule:active {
-  animation: 10s 0s forwards rotateSchedule ease-in;
-}
-
-@keyframes rotateSchedule {
-  0% {
-  }
-
-  50% {
-    transform: rotate3d(-21, 93, 52, 142deg);
-  }
-
-  100% {
-  }
-}
 
 .myfont-normal {
   font-family: "Roboto", sans-serif;

@@ -1,24 +1,25 @@
 $giallo : #F7D400;
-
+$gray : #f7f7f7;
 html {
-  background-color: white;
+  background-color: #f7f7f7;
 }
 
 .bg {
-
+  background-color: $gray;
   height: 100vh;
   width: 100vw;
-
 }
 
-.schedule {
-  background-color: $giallo;
-  height: 40vh;
-  border-radius: 10px;
-  width: 80%;
-
-  i{
-    font-size: 0.7em;
+.image{
+  img {
+    margin: 0;
+    width: 100%;
+    //height: 20%;
   }
+}
 
+.black-line{
+  width: 100%;
+  height: 3px;
+  background-color: #222222;
 }
