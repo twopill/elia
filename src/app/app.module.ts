@@ -8,6 +8,7 @@ import { AboutComponent } from './component/view/about/about.component';
 import { InfoProjectComponent } from './component/view/info-project/info-project.component';
 import { WipPageComponent } from './component/view/wip-page/wip-page.component';
 import { ErrorPageComponent } from './component/view/error-page/error-page.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { ErrorPageComponent } from './component/view/error-page/error-page.compo
     WipPageComponent,
     ErrorPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [ BrowserModule, AppRoutingModule,FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })

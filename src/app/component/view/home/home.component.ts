@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faAdjust} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
+
+  faBars = faBars;
+  faAdjust = faAdjust;
+
   links: string[] = ['raspberry vpn', 'instagram', 'psp go hack', '3ds hack'];
 
   social: string[] = ['github', 'instagram', 'reddit'];

@@ -1,9 +1,10 @@
 $giallo: #f7d400;
 
 .bg {
-  background-color: #f7d400;
-  height: 100vh;
+  background-color: $giallo;
   width: 100%;
+  max-height: 100vh;
+  height: 100vh;
 }
 
 
@@ -77,4 +78,17 @@ $giallo: #f7d400;
   border-radius: 50%;
   background-color: #000000;
   
+}
+
+.dim-icon{
+  font-size: 25px;
+}
+
+.svgg{
+  height: 62%;
+}
+
+.svg-img{
+  
+  width: 100%;
 }
