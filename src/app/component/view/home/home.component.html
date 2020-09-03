@@ -1,5 +1,5 @@
-<div class="bg p-0 m-0 force-mobile">
-    <!-- HEADER -->
+<!-- <div class="bg p-0 m-0 force-mobile">
+    <!-- HEADER 
     <div class="row m-0 py-5">
       <div class="col-6">
         <h4 class="myfont noselect">
@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    <!-- BODY -->
+    <!-- BODY 
 
     <div class="center row m-0 py-3">
       <div class="col-6 d-flex justify-content-center">
@@ -25,22 +25,18 @@
             <div class="u"></div>
           </h4>
 
-          <div
-            class="link row py-2 m-0"
-            *ngFor="let link of nLinks; let i = index"
-          >
+          <div class="link row py-2 m-0" *ngFor="let link of nLinks; let i = index">
             <h5
-              class="text-uppercase myfont-normal no-wrap clickable links noselect bg-rgba noselect"
+              class="text-uppercase myfont-normal no-wrap clickable links noselect  noselect"
               [routerLink]="['/info-project', link.id, link.name]"
-              routerLinkActive="router-link-active"
-            >
+              routerLinkActive="router-link-active">
               {{ link.name }}
             </h5>
           </div>
         </div>
       </div>
     </div>
-    <!-- BOTTOM -->
+    <!-- BOTTOM 
     <div class="bottom row m-0 py5 h-50">
       <div class="col d-flex align-items-center"></div>
       <div class="col-6 d-flex align-items-end justify-content-end">
@@ -54,4 +50,34 @@
         </div>
       </div>
     </div>
+</div> -->
+
+<div class="bg p-0 m-0">
+  <div class="row m-0 py-5 align-items-center">
+    <div class="col-1 ">
+      <div class="black-circle"></div> 
+    </div>
+    <div class="col-6 ">
+      
+      <h4 class="myfont noselect m-0">
+        ELIA
+        <div class="u-2"></div>
+      </h4>
+    </div>
+    <div class="col-5 d-flex justify-content-end " >
+      <h4 class="myfont-normal noselect m-0">
+        <i class="fas fa-bars"></i>
+      </h4>
+    </div>
+  </div>
+
+  <div class="link row p-2 m-3 m-0" *ngFor="let link of nLinks; let i = index">
+            <h5
+              class="text-uppercase d-content myfont-normal no-wrap clickable links noselect  noselect"
+              [routerLink]="['/info-project', link.id, link.name]"
+              routerLinkActive="router-link-active">
+              {{ link.name }}
+            </h5>
+          </div>
+
 </div>

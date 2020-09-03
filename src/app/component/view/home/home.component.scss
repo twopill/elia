@@ -1,3 +1,5 @@
+$giallo: #f7d400;
+
 .bg {
   background-color: #f7d400;
   height: 100vh;
@@ -18,15 +20,6 @@
   }
 }
 
-.bg-rgba {
-  width: auto;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.center {
-  .link {
-  }
-}
 
 .u {
   height: 1px;
@@ -34,11 +27,22 @@
   background-color: black;
 }
 
-.links:hover {
+.link{
+  border-radius: 7px;
+  background-color: #000000;
+  color: $giallo;
+  width: fit-content;
+  h5{
+    display: contents;
+    font-weight: 600;
+  }
+}
+
+.link:hover {
   animation: 0.2s forwards fadeOpacityIn;
 }
 
-.links:active {
+.link:active {
   animation: 0.2s forwards fadeOpacityIn;
 }
 
@@ -50,8 +54,8 @@
   }
 
   100% {
-    background-color: blue;
-    color: greenyellow;
+    background-color: white;
+    //color: greenyellow;
   }
 }
 
@@ -65,4 +69,12 @@
     width: 45%;
     left: 28%;
   }
+}
+
+.black-circle{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #000000;
+  
 }
