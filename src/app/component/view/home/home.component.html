@@ -53,32 +53,31 @@
 </div> -->
 
 <div class="bg p-0 m-0">
+  <div class="top">
   <div class="row m-0 py-5 align-items-center">
     <div class="col-1 ">
-      <div class="black-circle"></div> 
+      <div class="black-circle"></div>
     </div>
     <div class="col-6 ">
-      
+
       <h4 class="myfont noselect m-0">
         ELIA
         <div class="u-2"></div>
       </h4>
     </div>
-    <div class="col-5 d-flex justify-content-end clickable" >
+    <div class="col-5 d-flex justify-content-end clickable">
       <fa-icon [icon]="faAdjust" class="dim-icon"></fa-icon>
     </div>
   </div>
-
+</div>
   <div class="link row p-2 m-3 m-0" *ngFor="let link of nLinks; let i = index">
-            <h5
-              class="text-uppercase d-content myfont-normal no-wrap clickable links noselect  noselect"
-              [routerLink]="['/info-project', link.id, link.name]"
-              routerLinkActive="router-link-active">
-              {{ link.name }}
-            </h5>
-          </div>
-          <div class=" d-flex align-items-end svgg">
-            <object data="../../../../assets/Vector 1.svg" type="image/svg+xml" class="svg-img"></object>
-          </div>
-          
+    <h5 class="text-uppercase myfont-normal clickable links noselect"
+      [routerLink]="['/info-project', link.id, link.name]" routerLinkActive="router-link-active">
+      {{ link.name }}
+    </h5>
+  </div>
+  <div class=" d-flex align-items-end svgg">
+    <object data="../../../../assets/Vector 1.svg" type="image/svg+xml" class="svg-img"></object>
+  </div>
+
 </div>
