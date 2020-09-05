@@ -33,9 +33,22 @@ $giallo: #f7d400;
   background-color: #000000;
   color: $giallo;
   width: fit-content;
+  animation: 1.5s forwards  slideIn;
   h5{
     display: contents;
     font-weight: 600;
+  }
+}
+
+@keyframes slideIn{
+  0%{
+    transform: translateX(-210px);
+  }
+  50%{
+    transform: translateX(5px);
+  }
+  100%{
+    transform: translateX(0);
   }
 }
 
