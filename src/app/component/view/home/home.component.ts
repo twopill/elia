@@ -30,6 +30,10 @@ export class HomeComponent {
       id: '2',
     },
   ];
+  user: any = { name: ''};
+  name: string;
 
   constructor() {}
+
+  
 }

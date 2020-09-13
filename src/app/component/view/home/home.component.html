@@ -98,11 +98,13 @@
         </span></div>
       <div class="row m-0 justify-content-center">
         <div class="input-text">
-          <input type="text">
+          <input [(ngModel)]="user.age" name="name" id="name" type="text"/>
         </div>
       </div>
       <div class="row m-0 justify-content-center py-3">
-        <div class="btn-send clickable d-flex align-items-center justify-content-center font-weight-bold">
+        <div class="btn-send clickable d-flex align-items-center justify-content-center font-weight-bold"
+          
+        >
           <span class="text-send myfont">
             send
           </span>
@@ -111,7 +113,9 @@
     </div>
   </div>
   <div class="header-third-page">
-
+    <div class="title myfont font-weight-bold p-5">
+      hi {{user.name}}
+    </div>
   </div>
   <div class="header-fourth-page"></div>
 

@@ -248,6 +248,12 @@
   background-color: #20B766;
   border-radius: 25px;
   box-shadow: 0px -5px 8px rgba(0, 0, 0, 0.25);
+
+  .title{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px -4px 4px rgba(255, 255, 255, 0.25);
+    font-size: 2rem;
+  }
+
 }
 
 .header-fourth-page{
