@@ -1,7 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PageService } from '../../../service/page.service';
-import { SafePipeModule } from 'safe-pipe';
 
 @Component({
   selector: 'app-info-project',
