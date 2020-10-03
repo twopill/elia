@@ -1,5 +1,5 @@
-<!-- <!-- <div class="bg p-0 m-0 force-mobile">
-    <!-- HEADER 
+<!--  <div class="bg p-0 m-0 force-mobile">
+     
     <div class="row m-0 py-5">
       <div class="col-6">
         <h4 class="myfont noselect">
@@ -98,14 +98,12 @@
         </span></div>
       <div class="row m-0 justify-content-center">
         <div class="input-text">
-          <input [(ngModel)]="user.age" name="name" id="name" type="text"/>
+          <input [(ngModel)]="name" name="name" id="name" type="text"  maxlength="15">
         </div>
       </div>
       <div class="row m-0 justify-content-center py-3">
-        <div class="btn-send clickable d-flex align-items-center justify-content-center font-weight-bold"
-          
-        >
-          <span class="text-send myfont noselect">
+        <div class="btn-send clickable d-flex align-items-center justify-content-center font-weight-bold">
+          <span class="text-send myfont noselect" (click)="sendName()">
             send
           </span>
         </div>
@@ -114,7 +112,7 @@
   </div>
   <div class="header-third-page">
     <div class="title myfont font-weight-bold p-5">
-      hi {{user.name}}
+      hi {{name}}
     </div>
   </div>
   <div class="header-fourth-page"></div>
