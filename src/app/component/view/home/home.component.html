@@ -85,13 +85,13 @@
 
 <!-- NEW TEST -->
 
-<div class="background-red">
-  <div class="header-first-page">
-    <span class="title myfont font-weight-bold d-flex justify-content-center align-items-center p-5 noselect">
+<div class="background-red container">
+  <div data-aos="fade-down" data-aos-duration="1000" class="header-first-page row p-0 m-0">
+    <span class="title myfont font-weight-bold d-flex justify-content-center align-items-center m-5 noselect">
       hello this is my site
     </span>
   </div>
-  <div class="header-second-page d-flex justify-content-center align-items-center">
+  <div data-aos="fade-down" data-aos-duration="1000" class="header-second-page d-flex justify-content-center align-items-center">
     <div class="container-fluid m-0 p-0 ">
       <div class="row m-0 justify-content-center"><span class="py-2 myfont title font-weight-bold noselect">
           insert your name
@@ -103,18 +103,25 @@
       </div>
       <div class="row m-0 justify-content-center py-3">
         <div class="btn-send clickable d-flex align-items-center justify-content-center font-weight-bold">
-          <span class="text-send myfont noselect" (click)="sendName()">
+          <a class="text-send myfont noselect" (click)="sendName()" tabindex="0" accesskey="enter" href="#presentation">
             send
-          </span>
+          </a>
+          
         </div>
       </div>
     </div>
   </div>
-  <div class="header-third-page">
-    <div class="title myfont font-weight-bold p-5">
-      hi {{name}}
+  <div data-aos="fade-up" data-aos-duration="1000" class="header-third-page m-5">
+    <div class="title myfont font-weight-bold px-5 pt-5 noselect" id="presentation">
+      Hi <span class="bg-warning">{{name}}<span *ngIf="name!=null">,</span></span>
+    </div>
+    <div class="title myfont font-weight-bold px-5 pt-2 pb-5 noselect">
+      I decided to create this site for test my ability. 
+      My name is <span class="bg-warning">elia</span> and i'm a frontend developer, based in italy
     </div>
   </div>
-  <div class="header-fourth-page"></div>
+  <div data-aos="fade-right" data-aos-duration="1000" class="header-fourth-page ">
+    <app-cake></app-cake>
+  </div>
 
 </div>

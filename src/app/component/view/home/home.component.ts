@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import AOS from 'aos';
 
 @Component({
   selector: 'app-home',
@@ -30,6 +30,10 @@ export class HomeComponent {
   name: string;
 
   constructor() {}
+
+  ngOnInit(){
+    AOS.init();
+  }
 
   sendName(){
     // TO DO: SCROLL TO HI PAGE

@@ -1,0 +1,22 @@
+.circle{
+    max-width: 100%;
+    border-radius: 50px;
+}
+
+.right-border{
+    width: 5px;
+    border-radius: 5px;
+    height: 100px;
+    background-color: #1d1d1d;
+}
+
+.grid{
+    display: grid;
+}
+
+.rotate-text{
+    transform: rotate(-90deg);
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+}

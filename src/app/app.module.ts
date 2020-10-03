@@ -8,6 +8,7 @@ import { AboutComponent } from './component/view/about/about.component';
 import { InfoProjectComponent } from './component/view/info-project/info-project.component';
 import { WipPageComponent } from './component/view/wip-page/wip-page.component';
 import { ErrorPageComponent } from './component/view/error-page/error-page.component';
+import { CakeComponent } from './component/cake/cake.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ErrorPageComponent } from './component/view/error-page/error-page.compo
     InfoProjectComponent,
     WipPageComponent,
     ErrorPageComponent,
+    CakeComponent,
   ],
   imports: [ BrowserModule, AppRoutingModule,FormsModule ],
   providers: [],
