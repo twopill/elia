@@ -13,20 +13,22 @@ export class CakeComponent implements OnInit {
       {
         "name": 'html',
         "percentage": 80,
-        "color": '#1d1d1d',
+        "bg": 'linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)',
       },
       {
         "name": 'typescript',
         "percentage": 30,
-        "color": 'brown',
+        "bg": 'linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)',
       },
       {
         "name": 'scss',
         "percentage": 60,
-        "color": 'green',
+        "bg": 'linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)',
       }
     ]
   }]
+
+  //background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)
   constructor() { }
 
   ngOnInit(): void {

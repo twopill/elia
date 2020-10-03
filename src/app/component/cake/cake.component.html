@@ -1,14 +1,14 @@
 <ng-container *ngIf="experience">
-    
+    <div class="myfont font-weight-bold">skill</div>
         <div class="row p-0">
             <div class="col-1 p-0 d-flex justify-content-end">
                 <div class="rotate-text font-weight-bold my-2"></div>
                 <div class="right-border mr-2"></div>
             </div>
-            <div class="col-11 p-0 grid d-grid">
+            <div class="col-11 p-0 grid">
                 <ng-container *ngFor="let exp of experience">
-                    <div class="circle my-1 " *ngFor="let len of exp.lenguages" [ngStyle]="{'background-color': len.color,'width': len.percentage + '%'}">
-                        <span class="text-light px-3">{{len.name}}</span>
+                    <div class="circle my-1 " *ngFor="let len of exp.lenguages" [ngStyle]="{'background-image': len.bg,'width': len.percentage + '%'}">
+                        <span class="text-light font-weight-bold px-3">{{len.name}}</span>
                     </div>
                 </ng-container>
             </div>
