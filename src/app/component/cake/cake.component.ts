@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { reduce } from 'rxjs/operators';
+import { Component, Input, OnInit } from '@angular/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-cake',
@@ -8,30 +8,12 @@ import { reduce } from 'rxjs/operators';
 })
 export class CakeComponent implements OnInit {
 
-  experience = [{
-    lenguages:[
-      {
-        "name": 'html',
-        "percentage": 80,
-        "bg": 'linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)',
-      },
-      {
-        "name": 'typescript',
-        "percentage": 30,
-        "bg": 'linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)',
-      },
-      {
-        "name": 'scss',
-        "percentage": 60,
-        "bg": 'linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)',
-      }
-    ]
-  }]
+  @Input('experience') experience:[];
 
-  //background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)
   constructor() { }
-
-  ngOnInit(): void {
+  
+  ngOnInit(){
+    AOS.init();
   }
 
 }

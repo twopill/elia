@@ -9,6 +9,7 @@ import { InfoProjectComponent } from './component/view/info-project/info-project
 import { WipPageComponent } from './component/view/wip-page/wip-page.component';
 import { ErrorPageComponent } from './component/view/error-page/error-page.component';
 import { CakeComponent } from './component/cake/cake.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { CakeComponent } from './component/cake/cake.component';
     ErrorPageComponent,
     CakeComponent,
   ],
-  imports: [ BrowserModule, AppRoutingModule,FormsModule ],
+  imports: [ BrowserModule, AppRoutingModule,FormsModule,FontAwesomeModule ],
   providers: [],
   bootstrap: [AppComponent],
 })

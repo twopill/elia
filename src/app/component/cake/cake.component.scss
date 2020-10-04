@@ -2,6 +2,9 @@
     max-width: 100%;
     border-radius: 50px;
     border: 3px solid black;
+    .row{
+        display: content;
+    }
 }
 
 .right-border{
@@ -11,18 +14,10 @@
     background-color: #1d1d1d;
 }
 
-.grid{
-    display: grid;
-
-    span{
-        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.685);
-    }
-
+.shadow{
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.685);
 }
 
-.rotate-text{
-    transform: rotate(-90deg);
-    height: fit-content;
-    position: absolute;
-    bottom: 0;
+.grid{
+    display: grid;
 }

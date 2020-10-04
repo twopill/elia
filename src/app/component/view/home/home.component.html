@@ -86,19 +86,46 @@
 <!-- NEW TEST -->
 
 <div class="background-red container">
-  <div data-aos="fade-down" data-aos-duration="1000" class="header-first-page row p-0 m-0">
-    <span class="title myfont font-weight-bold d-flex justify-content-center align-items-center m-5 noselect">
-      hello this is my site
-    </span>
+  <div class="fixed-top mt-4 mb-5 mx-5 position-fixed px-5 navbar-row">
+    <nav class="navbar">
+      <div class="icon clickable">
+        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z" />
+          <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+        </svg>
+      </div>
+      <a href="https://github.com/twopill" target="_blank" rel="noopener noreferrer" class="icon dim clickable" style="font-size: 1.5rem;color:black">
+        
+        <fa-icon [icon]="faCodeBranch"></fa-icon>
+      </a>
+      <div class="icon">icon</div>
+      <div class="icon">icon</div>
+    </nav>
   </div>
-  <div data-aos="fade-down" data-aos-duration="1000" class="header-second-page d-flex justify-content-center align-items-center">
+  
+    
+    
+  <!-- <div data-aos="fade-down" data-aos-duration="1000" class="header-first-page row p-0 m-0">
+    <span class="title myfont font-weight-bold d-flex justify-content-center align-items-center m-5 noselect">
+      welcome to my site
+    </span>
+  </div> -->
+  <div class="header-first">
+    <div class="row p-5" data-aos="fade-top" data-aos-duration="1000">
+      <h3 class="myfont">welcome to my site! ✌</h3>
+    </div>
+  </div>
+  <div data-aos="fade-down" data-aos-duration="1000"
+    class="header-second-page d-flex justify-content-center align-items-center">
     <div class="container-fluid m-0 p-0 ">
       <div class="row m-0 justify-content-center"><span class="py-2 myfont title font-weight-bold noselect">
           insert your name
         </span></div>
       <div class="row m-0 justify-content-center">
         <div class="input-text">
-          <input [(ngModel)]="name" name="name" id="name" type="text"  maxlength="15">
+          <input [(ngModel)]="name" name="name" id="name" type="text" maxlength="15">
         </div>
       </div>
       <div class="row m-0 justify-content-center py-3">
@@ -106,7 +133,7 @@
           <a class="text-send myfont noselect" (click)="sendName()" tabindex="0" accesskey="enter" href="#presentation">
             send
           </a>
-          
+
         </div>
       </div>
     </div>
@@ -116,12 +143,12 @@
       Hi <span class="bg-warning">{{name}}<span *ngIf="name!=null">,</span></span>
     </div>
     <div class="title myfont font-weight-bold px-5 pt-2 pb-5 noselect">
-      I decided to create this site for test my ability. 
+      I decided to create this site for test my ability.
       My name is <span class="bg-warning">elia</span> and i'm a frontend developer, based in italy
     </div>
   </div>
-  <div data-aos="fade-right" data-aos-duration="1000" class="header-fourth-page ">
-    <app-cake></app-cake>
+  <div class="header-fourth-page ">
+    <app-cake [experience]='experience'></app-cake>
   </div>
 
 </div>
