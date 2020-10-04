@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import AOS from 'aos';
-import { faCodeBranch } from '@fortawesome/free-solid-svg-icons';
-
+import { faAd, faCodeBranch, faAngry } from '@fortawesome/free-solid-svg-icons';
+import { faAdjust } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,6 +10,8 @@ import { faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 export class HomeComponent{
 
   faCodeBranch = faCodeBranch;
+  faAdjust = faAdjust;
+  faAngry = faAngry;
 
   links: string[] = ['raspberry vpn', 'instagram', 'psp go hack', '3ds hack'];
 
@@ -37,17 +39,23 @@ export class HomeComponent{
       {
         "name": 'html',
         "percentage": 80,
-        "bg": 'linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)',
+        "bg": '62868C',
       },
       {
         "name": 'typescript',
         "percentage": 30,
-        "bg": 'linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)',
+        "bg": '62868C',
       },
       {
         "name": 'scss',
         "percentage": 60,
-        "bg": 'linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)',
+        "bg": '62868C',
+      }
+      ,
+      {
+        "name": 'angular',
+        "percentage": 40,
+        "bg": '62868C',
       }
     ]
   }]
