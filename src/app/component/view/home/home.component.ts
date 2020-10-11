@@ -1,41 +1,22 @@
 import { Component } from '@angular/core';
 import AOS from 'aos';
-import { faAd, faCodeBranch, faAngry } from '@fortawesome/free-solid-svg-icons';
+import { faCodeBranch, faAngry } from '@fortawesome/free-solid-svg-icons';
 import { faAdjust } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent{
+export class HomeComponent {
 
   faCodeBranch = faCodeBranch;
   faAdjust = faAdjust;
   faAngry = faAngry;
 
-  links: string[] = ['raspberry vpn', 'instagram', 'psp go hack', '3ds hack'];
-
-  social: string[] = ['github', 'instagram', 'reddit'];
-
-  nLinks: object[] = [
-    {
-      name: 'raspberry vpn',
-      id: '0',
-    },
-    {
-      name: 'psp go hack',
-      id: '1',
-    },
-    {
-      name: '3ds hack',
-      id: '2',
-    },
-  ];
-  
   name: string;
 
-  experience= [{
-    lenguages:[
+  experience = [{
+    lenguages: [
       {
         "name": 'html',
         "percentage": 80,
@@ -60,14 +41,14 @@ export class HomeComponent{
     ]
   }]
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(){
+  ngOnInit() {
     AOS.init();
   }
 
-  sendName(){
+  sendName() {
     // TO DO: SCROLL TO HI PAGE
   }
-  
+
 }
