@@ -7,8 +7,4 @@
 
 ***home-page***
 
-[![Screenshot-20200829-223111.jpg](https://i.postimg.cc/cCNwfQjN/Screenshot-20200829-223111.jpg)](https://postimg.cc/zb0yrR8d)
-
-***wip-page***
-
-[![Screenshot-20200829-223407.png](https://i.postimg.cc/J0c6X7pP/Screenshot-20200829-223407.png)](https://postimg.cc/H8n9DmDy)
+**wip**
