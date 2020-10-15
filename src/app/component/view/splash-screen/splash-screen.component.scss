@@ -1,0 +1,77 @@
+$deepBlue: #012535;
+$acqua: #bae2da;
+$rosa: #ec9192;
+
+.bg {
+    border: 20px solid #ec9192;
+    background-color: $acqua;
+    width: 100%;
+    height: 100vh;
+
+    .header-title {
+        font-weight: 900;
+        font-size: 77px;
+        text-shadow: 5px 4px 0px $rosa;
+    }
+
+    .subtitle {
+        font-weight: 600;
+        font-size: 33px;
+    }
+
+    .name {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 27pt;
+        color: $rosa;
+        text-shadow: 5px 4px 0px $deepBlue;
+
+        .pos {
+            padding-left: 35vw;
+        }
+    }
+
+    .inputbox {
+        font-family: "Epilogue", sans-serif;
+        font-weight: bold;
+        color: $deepBlue;
+        font-size: 25pt;
+        width: 30vw;
+        background: none;
+        border-bottom: 4px solid $rosa;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        &:focus{
+            outline: none;
+            color: $rosa;
+            font-size: 25pt;
+            font-style: italic;
+        }
+    }
+}
+
+::placeholder {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25pt;
+    color: $rosa;
+}
+
+.button-read-me {
+    width: 12rem;
+    height: 4rem;
+    border-radius: 118px;
+    background: $rosa;
+    box-shadow: 5px 4px 0px #012535;
+
+    a {
+        color: $deepBlue;
+        text-decoration: none;
+    }
+
+    .text {
+        font-size: 29px;
+        color: $deepBlue;
+    }
+}

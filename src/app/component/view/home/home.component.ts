@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import AOS from 'aos';
-import { faCodeBranch, faAngry } from '@fortawesome/free-solid-svg-icons';
-import { faAdjust } from '@fortawesome/free-solid-svg-icons';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -65,10 +64,15 @@ export class HomeComponent {
 
 
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private router: Router ) { }
 
   ngOnInit() {
+    this.goToItems();
     AOS.init();
+  }
+
+  goToItems() {
+    this.router.navigate(['loader']);
   }
 
   switchModality(){

@@ -11,6 +11,7 @@ import { ErrorPageComponent } from './component/view/error-page/error-page.compo
 import { CakeComponent } from './component/cake/cake.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TerminalComponent } from './component/view/terminal/terminal.component';
+import { SplashScreenComponent } from './component/view/splash-screen/splash-screen.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { TerminalComponent } from './component/view/terminal/terminal.component'
     ErrorPageComponent,
     CakeComponent,
     TerminalComponent,
+    SplashScreenComponent,
   ],
   imports: [ BrowserModule, AppRoutingModule,FormsModule,FontAwesomeModule ],
   providers: [],
