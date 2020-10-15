@@ -10,6 +10,7 @@ import { WipPageComponent } from './component/view/wip-page/wip-page.component';
 import { ErrorPageComponent } from './component/view/error-page/error-page.component';
 import { CakeComponent } from './component/cake/cake.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TerminalComponent } from './component/view/terminal/terminal.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     WipPageComponent,
     ErrorPageComponent,
     CakeComponent,
+    TerminalComponent,
   ],
   imports: [ BrowserModule, AppRoutingModule,FormsModule,FontAwesomeModule ],
   providers: [],

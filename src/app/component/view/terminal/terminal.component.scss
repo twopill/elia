@@ -1,0 +1,65 @@
+$viola: #9071AD;
+$verde: #74B79E;
+$giallo: #FFEF61;
+$blue: #78A4EB;
+$rosso: #FF6161;
+$grigio: #7D8488;
+
+
+.terminal {
+  background-color: #263238;
+  border-radius: 25px;
+}
+
+.colorVerde {
+  color: $verde;
+}
+
+.colorViola {
+  color: $viola;
+}
+
+.colorGiallo {
+  color: $giallo;
+}
+
+.colorBlue {
+  color: $blue;
+}
+
+.colorRosso {
+  color: $rosso;
+}
+
+.colorGrigio {
+  color: $grigio;
+}
+
+.elements {
+  margin: 1rem 0.5rem;
+}
+
+.circle {
+  display: inline-flex;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+
+  .rosso {
+    background-color: $rosso;
+    padding: 9px;
+    margin: 0 0.5rem;
+  }
+
+  .giallo {
+    padding: 9px;
+    margin: 0 0.5rem;
+    background-color: $giallo;
+  }
+
+  .verde {
+    padding: 9px;
+    margin: 0 0.5rem;
+    background-color: $verde;
+  }
+}

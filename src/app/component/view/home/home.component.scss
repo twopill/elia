@@ -1,63 +1,81 @@
 $deepBlue: #012535;
 $acqua: #BAE2DA;
 
-.bg{
+.bg {
   background-color: $deepBlue;
 
-  .space-image{
-    width: 100%;
+  .space-image {
+    right: 0;
     height: 100%;
     position: absolute;
     z-index: 1;
     display: flex;
     justify-content: flex-end;
-    .img{
+
+    .img {
       height: 100%;
     }
-    
+
   }
 
-  .first-page{
+  .first-page {
     height: 100vh;
-    .polygonAcqua{
+
+    .polygonAcqua {
       background-color: $acqua;
       clip-path: polygon(0 0, 79% 0, 35% 100%, 0 100%);
       width: 100%;
       height: 100vh;
     }
 
-    .navbar-up{
+    .navbar-up {
       z-index: 1;
-      .title{
-        font-size: 30pt;
+
+      .title {
+        font-size: 20pt;
         opacity: 0;
       }
-      .about-and-project{
+
+      .about-and-project {
         opacity: 0;
         font-weight: 400;
-        font-size: 30pt;
+        font-size: 20pt;
+
+        a {
+          color: $deepBlue;
+          text-decoration: none;
+        }
       }
-      .contacts{
+
+      .contacts {
         font-weight: 400;
-        font-size: 30pt;
-        color:$acqua;
+        font-size: 20pt;
+        color: $acqua;
         padding-left: 13rem;
       }
     }
 
-    .navbar{
-      .title{
-        font-size: 30pt;
+    .navbar {
+
+      .title {
+        font-size: 20pt;
         color: $deepBlue;
       }
-      .about-and-project{
+
+      .about-and-project {
         font-weight: 400;
-        font-size: 30pt;
+        font-size: 20pt;
         color: $deepBlue;
+
+        a {
+          color: $deepBlue;
+          text-decoration: none;
+        }
       }
-      .contacts{
+
+      .contacts {
         font-weight: 400;
-        font-size: 30pt;
+        font-size: 20pt;
       }
     }
 
@@ -65,60 +83,94 @@ $acqua: #BAE2DA;
 
   }
 
-  .hi-name{
-    .title{
-      font-size: 64pt;
+  .hi-name {
+    padding-top: 5rem;
+
+    .pl-3-1 {
+      padding-left: 2rem;
+    }
+
+    .title {
+      font-size: 45pt;
       color: $deepBlue;
     }
-    .subtitle{
+
+    .subtitle {
       margin-left: 0;
       margin-right: 0;
-      margin-top: 6rem;
+      padding-top: 2rem;
     }
-    .sub-subtitle{
+
+    .sub-subtitle {
       margin-left: 0;
       margin-right: 0;
-      .title{
-        font-size: 64pt;
+
+      .title {
+        font-size: 55pt;
         font-weight: 900;
         color: $deepBlue;
         text-shadow: 5px 4px 0px #EC9192;
+        transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        &:hover {
+          text-shadow: 9px 4px 0px #EC9192;
+        }
       }
     }
   }
 
-  .button-read-me{
-    width: 264px;
-    height: 68px;
+  .pl-3-1 {
+    padding-left: 2rem;
+  }
+
+  .button-read-me {
+
+    width: 12rem;
+    height: 4rem;
     border-radius: 118px;
     background: #EC9192;
     box-shadow: 5px 4px 0px #012535;
 
-    .text{
-      font-size: 33px;
+    a {
+      color: $deepBlue;
+      text-decoration: none;
+    }
+
+    .text {
+      font-size: 29px;
       color: $deepBlue
     }
 
   }
 
-  .second-page{
-   height: 100vh; 
+  .second-page {
+    height: 100vh;
 
-   .title-page{
-    font-size: 80px;
-    color:$acqua;
-   }
+    .title-page {
+      font-size: 45px;
+      color: $acqua;
+    }
 
-   .button-np-mode{
-    width: 264px;
-    height: 68px;
-    border: 5px solid #EC9192;
-    box-sizing: border-box;
-    border-radius: 49px;
-    color: #EC9192;
-    font-size: 33px;
-   }
+    .button-np-mode {
+      width: 12rem;
+      height: 4rem;
+      //border-radius: 118px;
+      border: 5px solid #EC9192;
+      box-sizing: border-box;
+      border-radius: 49px;
+      color: #EC9192;
+      font-size: 24px;
+    }
 
   }
 
+
+  .third-page {
+    height: 100vh;
   }
+
+}
+
+.h-65{
+  height: 65%;
+}

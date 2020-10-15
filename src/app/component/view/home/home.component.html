@@ -1,92 +1,118 @@
 <div class="bg">
   <div class="first-page">
-   
-      <div class="navbar-up position-absolute w-100 pt-5">
-        <div class="row m-0 navbar">
-          <div class="col-3 d-flex justify-content-center align-items-center">
-            <div class="epilogue font-weight-bold title clickable">Elia's portfolio</div>
-          </div>
-          <div class="col d-flex justify-content-center">
-            <div class="epilogue about-and-project clickable">
-              About me
-            </div>
-          </div>
-          <div class="col">
-            <div class="epilogue about-and-project clickable">
-              Projects
-            </div>
-          </div>
-          <div class="col">
-            <div class="epilogue contacts clickable">
-              Contacts
-            </div>
-          </div>
-        </div>
-      </div>  
-      <div class="space-image" >
-        <img src="../../../../assets/colore_img.png" class="img" alt="" srcset="">
-        
-      </div>
-        
-      <div class="polygonAcqua">
-          <div class="row m-0 navbar pt-5">
-            <div class="col-4 d-flex justify-content-center align-items-center">
-              <div class="epilogue font-weight-bold title clickable">Elia's portfolio</div>
-            </div>
-            <div class="col-4">
-              <div class="epilogue about-and-project d-flex justify-content-center clickable">
-                About me
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="epilogue about-and-project clickable">
-                Projects
-              </div>
-            </div>
-          </div>
-          <div class="row m-0">
 
-          </div>
-          <div class="hi-name">
-            <div class="row subtitle">
-              <div class="col-4 d-flex justify-content-center">
-                <div  class="epilogue font-weight-normal title">
-                  Hi Gianni
-                </div>
-              </div>
-            </div>
-            <div class="row sub-subtitle">
-              <div class="col-5 pl-4 ml-1 d-flex justify-content-center">
-                <div  class="epilogue title">
-                  I’m Elia,<br>a Developer
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row mr-0 ml-0 mt-5">
-            <div class="col-4 d-flex justify-content-center">
-              <div data-aos="fade-down"  class="button-read-me d-flex align-items-center justify-content-center clickable">
-                <div class="robotoMono font-weight-bold text" >
-                  Read More
-                </div>
-              </div>
-            </div>
+    <div class="navbar-up position-absolute w-100 pt-4">
+      <div class="row m-0 py-0 navbar">
+        <div class="col-3 d-flex justify-content-center align-items-center">
+          <div class="epilogue font-weight-bold title clickable">Elia's portfolio</div>
+        </div>
+        <div class="col-3 pl-5 ml-5 d-flex justify-content-center">
+          <div class="epilogue about-and-project clickable d-flex justify-content-center">
+            <a href="#about-me">About me</a>
           </div>
         </div>
-     
+        <div class="col-3 d-contents">
+          <div class="epilogue about-and-project clickable">
+            Projects
+          </div>
+        </div>
+        <div class="col ml-5 pl-5">
+          <div class="epilogue contacts clickable">
+            Contacts
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-aos="flip-right" class="space-image">
+      <img src="../../../../assets/colore_img.png" class="img">
+
     </div>
 
-    <div class="second-page">
-      <div class="row m-0">
-        <div class="col p-0 title-page font-weight-bold d-flex justify-content-center">
-          About me
+    <div class="polygonAcqua">
+      <div class="row m-0 navbar pt-4">
+        <div class="col-3 d-flex justify-content-center align-items-center">
+          <div class="epilogue font-weight-bold title clickable">Elia's portfolio</div>
+        </div>
+        <div class="col-3 pl-5 ml-5">
+          <div class="epilogue about-and-project d-flex justify-content-center clickable">
+            About me
+          </div>
+        </div>
+        <div class="col  ml-5 pl-5">
+          <div class="epilogue about-and-project clickable">
+            Projects
+          </div>
         </div>
       </div>
-      <div class="row mx-0 my-5 justify-content-center">
-        <div data-aos="zoom-in" class="button-np-mode clickable d-flex justify-content-center align-items-center font-weight-bold">
-          PRO MODE
+
+      <div class="hi-name">
+        <div class="row subtitle mx-3 pl-3-1">
+          <div class="col-5">
+            <div class="epilogue font-weight-normal title noselect">
+              Hi Gianni
+            </div>
+          </div>
+        </div>
+        <div class="row mx-3 sub-subtitle pl-3-1">
+          <div class="col-5">
+            <div class="epilogue title clickable noselect">
+              I’m Elia,<br>a Developer
+            </div>
+          </div>
         </div>
       </div>
-      
+      <div class="row mx-3 mt-5 pl-3-1">
+        <div class="col-5">
+          <div data-aos="fade-down" class="button-read-me d-flex align-items-center justify-content-center clickable">
+            <div class="robotoMono font-weight-bold text noselect">
+              <a href="#about-me">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="second-page">
+    <div class="row m-0">
+      <div class="col p-0 title-page font-weight-bold d-flex justify-content-center" id="about-me">
+        About me
+      </div>
+    </div>
+    <div class="row mx-0 my-5 justify-content-center">
+      <div data-aos="zoom-in"
+        class="button-np-mode noselect clickable d-flex justify-content-center align-items-center font-weight-bold text-uppercase"
+        (click)="switchModality()">
+        {{modality}}
+      </div>
+    </div>
+    <div class="row m-0 h-65 align-items-center" *ngIf="changeMod">
+      <div class="col-4">
+        <div class="px-4">
+          <app-terminal [personalInformation]="personalInformation"></app-terminal>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="px-4">
+          <app-terminal [skill]="skill"></app-terminal>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="px-4">
+          <app-terminal [softWill]="softWill"></app-terminal>
+        </div>
+      </div>
+    </div>
+    <div class="row m-0 h-65 align-items-center" *ngIf="!changeMod">
+      <div class="col-4">
+        <div class="px-4">
+          <app-terminal [personalInformationNoob]="personalInformationNoob"></app-terminal>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="third-page">
+
+  </div>
+
+</div>

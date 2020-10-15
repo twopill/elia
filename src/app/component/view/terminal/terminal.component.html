@@ -1,0 +1,138 @@
+<div *ngIf="personalInformation">
+  <div class="terminal" [ngStyle]="{'height': personalInformation.dimension.height + 'px'}">
+    <div class="p-4">
+      <div class="circle">
+        <div class="circle rosso"></div>
+        <div class="circle giallo"></div>
+        <div class="circle verde"></div>
+      </div>
+      <div class="elements">
+        <div class="row m-0 robotoMono text-light"><span class="colorViola pr-3">class</span> Person&#123;</div>
+        <div class="row m-0 robotoMono text-light pl-3"><span class="colorVerde">const</span>
+          <div class="pl-3">name:</div><span class="colorGiallo px-2">string</span>
+          <div class="pr-2">=</div>
+          <div class="colorBlue">"{{personalInformation.information.name}}"</div>
+          <div class="pl-1">;</div>
+        </div>
+        <div class="row m-0 robotoMono text-light pl-3">
+          <div class="colorViola">let</div>
+          <div class="pl-3">age:</div>
+          <div class="colorGiallo px-2">number</div>
+          <div class="pr-2">=</div>
+          <div class="colorRosso">{{personalInformation.information.age}}</div>
+          <div class="pl-1">;</div>
+        </div>
+        <div class="row m-0 robotoMono text-light pl-3">
+          <div class="colorViola">let</div>
+          <div class="pl-3">based:</div><span class="colorGiallo px-2">string</span>
+          <div class="pr-2">=</div>
+          <div class="colorBlue">"{{personalInformation.information.based}}"</div>
+          <div class="pl-1">;</div>
+        </div>
+        <div class="row m-0 robotoMono text-light pl-3">
+          <div class="colorViola">let</div>
+          <div class="pl-3">jobPosition:</div><span class="colorGiallo px-2">string</span>
+          <div class="pr-2">=</div>
+          <div class="colorBlue">"{{personalInformation.information.jobPosition}}"</div>
+          <div class="pl-1">;</div>
+        </div>
+        <div class="row m-0 robotoMono text-light pl-3">
+          <div class="colorViola">let</div>
+          <div class="pl-3">hobby:</div><span class="colorGiallo px-2">string</span>
+          <div class="pr-2">=</div>
+          <div>[<div class="colorBlue" *ngFor="let hobby of personalInformation.information.hobby">"{{hobby}}"</div>]
+          </div>
+          <div class="pl-1">;</div>
+        </div>
+        <div class="row m-0 robotoMono text-light pl-3">
+          <div class="colorViola">let</div>
+          <div class="pl-3">isOnline:</div><span class="colorGiallo px-2">boolean</span>
+          <div class="pr-2">=</div>
+          <div class="colorBlue">"{{personalInformation.information.isOnline}}"</div>
+          <div class="pl-1">;</div>
+        </div>
+        <div class="row m-0 robotoMono pl-3">
+          <div class="colorGrigio">{{personalInformation.information.comment}}</div>
+        </div>
+        <div class="row m-0 text-light">&#125;</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="skill">
+  <div class="terminal" [ngStyle]="{'height': skill.dimension.height + 'px'}">
+    <div class="p-4">
+      <div class="circle">
+        <div class="circle rosso"></div>
+        <div class="circle giallo"></div>
+        <div class="circle verde"></div>
+      </div>
+      <div class="elements">
+        <div class="row m-0 robotoMono text-light">
+          <div class="colorGiallo">skill</div>()&#123;
+        </div>
+        <div class="mt-2">
+          <div class="row pl-3 robotoMono text-light m-0">
+            <div class="colorVerde">experience</div>
+            <div class="px-3">=</div>[&#123;
+          </div>
+          <div class="row pl-4 robotoMono text-light m-0">
+            <div class="colorVerde">lenguages</div>:[
+          </div>
+          <div class="row pl-4 robotoMono text-light m-0" *ngFor="let lenguage of skill.experience.lenguages">&#123;<div
+              class="colorRosso pl-2">"name"</div>: '{{lenguage}}'<div class="pl-2">&#125;,</div>
+          </div>
+          <div class="row pl-4 text-light m-0">
+            ]<div class="m-1">,</div>
+          </div>
+          <div class="row pl-4 robotoMono text-light m-0">
+            <div class="colorVerde">framework</div>:[
+          </div>
+          <div class="row pl-4 robotoMono text-light m-0" *ngFor="let framework of skill.other.frameworks">&#123;<div
+              class="colorRosso pl-2">"name"</div>: '{{framework}}'<div class="pl-2">&#125;,</div>
+          </div>
+          <div class="row pl-4 text-light m-0">
+            ]
+          </div>
+          <div class="row mb-1 mx-0 mb-1 text-light">
+            &#125;<div class="pl-1">]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="softWill">
+  <div class="terminal" [ngStyle]="{'height': softWill.dimension.height + 'px'}">
+    <div class="p-4">
+      <div class="circle">
+        <div class="circle rosso"></div>
+        <div class="circle giallo"></div>
+        <div class="circle verde"></div>
+      </div>
+      <div class="elements mt-5 pt-5">
+        <div class="row m-0 robotoMono text-light"><span class="colorViola pr-3">class</span> softWill&#123;</div>
+        <div class="row m-0 robotoMono text-light pl-3" *ngFor="let will of softWill.will.name">
+          <div class="colorViola">let</div>
+          <div class="pl-3">{{will}}:</div><span class="colorGiallo px-2">boolean</span>
+          <div class="pr-2">=</div>
+          <div class="colorRosso">true</div>
+          <div class="pl-1">;</div>
+        </div>
+        <div class="row m-0 text-light">&#125;</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="personalInformationNoob">
+  <div class="terminal" [ngStyle]="{'height': personalInformationNoob.dimension.height + 'px'}">
+    <div class="p-4">
+      <div class="row m-0 robotoMono text-light">
+        
+      </div>
+    </div>
+  </div>
+</div>
