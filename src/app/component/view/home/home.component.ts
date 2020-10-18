@@ -68,18 +68,9 @@ export class HomeComponent {
     if (this.pattern.test(name)) { return true };
   }
 
-  constructor(private route: ActivatedRoute, private router: Router, translate: TranslateService) {
-
-    // this language will be used as a fallback when a translation isn't found in the current language
-    translate.setDefaultLang('en');
-
-    // the lang to use, if the lang isn't available, it will use the current loader to get them
-    translate.use('en');
+  constructor(private route: ActivatedRoute, private router: Router) {
 
   }
-  param = { value: 'world' };
-
-
 
   ngOnInit() {
     //this.goToItems();
