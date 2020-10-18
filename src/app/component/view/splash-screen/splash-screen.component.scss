@@ -51,12 +51,18 @@ $rosa: #ec9192;
     }
 }
 
-::placeholder {
+input[type='text']::placeholder{
     font-weight: bold;
     font-style: italic;
     font-size: 25pt;
     color: $rosa;
+    transition: 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+input[type='text']::placeholder:focus{
+    transform: translateY(30px);
+}
+
 
 .button-read-me {
     width: 12rem;
@@ -74,4 +80,17 @@ $rosa: #ec9192;
         font-size: 29px;
         color: $deepBlue;
     }
+
+    input[type='submit']{
+        background: none;
+        border: none;
+    }
+
+}
+
+.img-seduto{
+    width: 15%;
+    height: auto;
+    top: 34%;
+    left: 56%;
 }

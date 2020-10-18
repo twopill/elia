@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import AOS from 'aos';
 @Component({
   selector: 'app-splash-screen',
@@ -7,16 +8,27 @@ import AOS from 'aos';
 })
 export class SplashScreenComponent implements OnInit {
 
-  name:any;
+  name: any;
+  pattern: RegExp = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.' -]+$/u;
 
-  constructor() { }
+  constructor(private router: Router,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    
     AOS.init();
   }
 
-  controllAndSub($event){
-    console.log($event);
+  isValid(name) {
+    if (this.pattern.test(name)) { return true };
+  }
+
+  controllAndSub(name) {
+    if (name != undefined && this.isValid(name)) {
+      console.log(name)
+      this.router.navigate(['home',name]);
+    } else {
+      console.log('sbagliato merda')
+    }
   }
 
 }

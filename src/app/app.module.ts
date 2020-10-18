@@ -12,6 +12,7 @@ import { CakeComponent } from './component/cake/cake.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TerminalComponent } from './component/view/terminal/terminal.component';
 import { SplashScreenComponent } from './component/view/splash-screen/splash-screen.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { SplashScreenComponent } from './component/view/splash-screen/splash-scr
     TerminalComponent,
     SplashScreenComponent,
   ],
-  imports: [ BrowserModule, AppRoutingModule,FormsModule,FontAwesomeModule ],
+  imports: [ BrowserModule, AppRoutingModule,FormsModule,FontAwesomeModule,TranslateModule.forRoot({defaultLanguage: 'en'}) ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -46,6 +46,7 @@ export class PageService {
     }
   }
 
+ 
   getTextSecond(id) {
     for (let i = 0; i <= this.textSecond.length; i++) {
       if (id == 0) return this.textSecond[i];

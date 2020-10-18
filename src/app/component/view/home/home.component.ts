@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import AOS from 'aos';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,7 +11,7 @@ export class HomeComponent {
 
   modality: string = 'Pro mode';
   changeMod: boolean = true;
-
+  name: string;
   personalInformation = {
     dimension: {
       height: 460
@@ -62,12 +63,28 @@ export class HomeComponent {
     text: 'TeamWork and other other'
   }
 
+  pattern: RegExp = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.' -]+$/u;
+  isValid(name) {
+    if (this.pattern.test(name)) { return true };
+  }
+
+  constructor(private route: ActivatedRoute, private router: Router, translate: TranslateService) {
+
+    // this language will be used as a fallback when a translation isn't found in the current language
+    translate.setDefaultLang('en');
+
+    // the lang to use, if the lang isn't available, it will use the current loader to get them
+    translate.use('en');
+
+  }
+  param = { value: 'world' };
 
 
-  constructor(private route: ActivatedRoute, private router: Router ) { }
 
   ngOnInit() {
-    this.goToItems();
+    //this.goToItems();
+    let nameSplash = this.route.snapshot.paramMap.get('name');
+    this.isValid(nameSplash) ? this.name = this.route.snapshot.paramMap.get('name') : this.goToItems()
     AOS.init();
   }
 
@@ -75,8 +92,8 @@ export class HomeComponent {
     this.router.navigate(['loader']);
   }
 
-  switchModality(){
-    
+  switchModality() {
+
     this.changeMod = !this.changeMod;
     this.changeMod ? this.modality = 'Pro mode' : this.modality = 'Noob mode'
 

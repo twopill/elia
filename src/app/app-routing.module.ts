@@ -9,14 +9,14 @@ import { SplashScreenComponent } from './component/view/splash-screen/splash-scr
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'home/:name', component: HomeComponent },
   { path: 'about8622', component: AboutComponent },
   { path: 'loader', component: SplashScreenComponent},
   { path: 'info-project/:id/:name', component: InfoProjectComponent },
   { path: 'wip', component: WipPageComponent },
   { path: 'error', component: ErrorPageComponent },
   { path: '**', component: ErrorPageComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'loader', pathMatch: 'full' },
 ];
 
 @NgModule({

@@ -11,11 +11,11 @@ export class ErrorPageComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      this.route.navigate(['/home']);
+      this.route.navigate(['/loader']);
     }, 2500);
   }
 
   navigateBack() {
-    return this.route.navigate(['/home']);
+    return this.route.navigate(['/loader']);
   }
 }
