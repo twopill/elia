@@ -1,12 +1,16 @@
 import { TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
 import { PageService } from './page.service';
 
 describe('PageService', () => {
   let service: PageService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      imports: [
+        RouterTestingModule
+      ]
+    });
     service = TestBed.inject(PageService);
   });
 

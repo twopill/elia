@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import AOS from 'aos';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { ElementRef } from '@angular/core';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -68,8 +69,13 @@ export class HomeComponent {
     if (this.pattern.test(name)) { return true };
   }
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor(private route: ActivatedRoute, private router: Router, { nativeElement }: ElementRef<HTMLImageElement>) {
+    const supports = 'loading' in HTMLImageElement.prototype;
 
+    if (supports) {
+      nativeElement.setAttribute('loading', 'lazy');
+    }
+    
   }
 
   ngOnInit() {
