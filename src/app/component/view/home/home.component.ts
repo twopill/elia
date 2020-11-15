@@ -78,26 +78,38 @@ export class HomeComponent {
   }
 
   isValid(name) {
-    if (this.pattern.test(name) || name == '#about-me' ) {
-      console.log(name) 
+    if (this.pattern.test(name)) {
       return true 
     }
   }
 
+  flag:boolean = false;
+  private fragment: string;
+
   ngOnInit() {
     
-    let nameSplash = this.route.snapshot.paramMap.get('name');
-
-    nameSplash == null ? this.goToLoader() : null
+    const nameSplash = this.route.snapshot.paramMap.get('name');
+    
+    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
     this.isValid(nameSplash)  ? this.name = this.route.snapshot.paramMap.get('name') : this.goToLoader()
     this.nameSplashAutoKiller(nameSplash);
+
     AOS.init();
 
   }
 
+  ngAfterViewInit(): void {
+    try {
+      document.querySelector('#' + this.fragment).scrollIntoView();
+    } catch (e) { }
+  }
+
+  navigateToAboutMe(){
+    this.router.navigate( ['/'], {fragment: 'about-me'});
+  }
+
   nameSplashAutoKiller(nameSplash){
-   if(nameSplash == null && !this.route.snapshot.paramMap.getAll('#about-me')){
-     console.log('scusa ma devi andartene')
+   if(nameSplash == null && this.fragment != 'about-me') {
      this.goToLoader();
    }
   }

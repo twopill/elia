@@ -2,25 +2,33 @@
   <div class="first-page">
 
     <div class="navbar-up position-absolute w-100 pt-4">
-      <div class="row px-0 py-2 mx-5 navbar">
-        <div class="col-3 d-flex justify-content-center align-items-center">
+      <!--<div class="row px-0 py-2 mx-5 navbar">
+        <div class="col-sm-3 d-flex justify-content-center align-items-center">
           <div class="epilogue font-weight-bold title clickable">Elia's portfolio</div>
         </div>
-        <div class="col-3 justify-content-center">
-          <div class="epilogue about-and-project clickable d-flex justify-content-center">
-            <a href="#about-me">About me</a>
+        <div class="col-sm-3 justify-content-center">
+          <div class="epilogue navbar-text clickable d-flex justify-content-center">
+            <a href="#about-me" >About me</a>
           </div>
         </div>
-        <div class="col-3 d-contents">
-          <div class="epilogue about-and-project clickable">
+        <div class="col-sm-3 d-contents">
+          <div class="epilogue navbar-text clickable">
             Projects
           </div>
         </div>
-        <div class="col-3">
-          <div class="epilogue contacts clickable">
+        <div class="col-sm-3">
+          <div class="epilogue navbar-text clickable">
             Contacts
           </div>
         </div>
+      </div>-->
+      <div class="row px-0 py-2 mx-5 navbar">
+        <ul class="list-inline w-100  d-flex justify-content-space align-items-end">
+          <li class="list-inline-item justify-content-center "><div class="epilogue font-weight-bold title clickable">Elia's portfolio</div></li>
+          <li class="list-inline-item justify-content-center "><a href="#about-me" class="epilogue text clickable">About me</a></li>
+          <li class="list-inline-item justify-content-center "><div class="epilogue text clickable">Projects</div></li>
+          <li class="list-inline-item justify-content-center "><div class="epilogue text clickable">Contacts</div></li>
+        </ul>
       </div>
     </div>
     <div data-aos="flip-right" class="space-image">
@@ -35,7 +43,7 @@
         <div class="row subtitle mx-3 pl-3-1">
           <div class="col-5">
             <div class="epilogue font-weight-normal title noselect">
-              Hi {{name}}
+              Hi <span class="name px-2 py-1">{{name}}</span>
             </div>
           </div>
         </div>
@@ -51,7 +59,7 @@
         <div class="col-5">
           <div data-aos="fade-down" class="button-read-me d-flex align-items-center justify-content-center clickable">
             <div class="robotoMono font-weight-bold text noselect">
-              <a href="#about-me">Read More</a>
+              <a fragment="about-me" (click)="navigateToAboutMe()" >Read More</a>
             </div>
           </div>
         </div>
