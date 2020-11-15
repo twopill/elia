@@ -18,18 +18,12 @@ export class SplashScreenComponent implements OnInit {
   imgAngry: string = "../../../../../assets/elia_angry.png"
   imgGo: string  = "../../../../../assets/elia_go.png"
   click: boolean = false;
-
+  errorMessage: string;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
     AOS.init();
   }
-
-  // ngOnChanges(changes: SimpleChanges): void {
-  //   //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-  //   //Add '${implements OnChanges}' to the class.
-  //   this.isValid(changes) 
-  // }
 
   isValid(name) {
     if (this.pattern.test(name)) { return true };
@@ -41,24 +35,23 @@ export class SplashScreenComponent implements OnInit {
 
   out(){
     this.imgPcSmile = this.imgPcBackup;
+    //FIXME: serve ancora? (non ho tempo di guardare mo sorry)
   }
 
 
   controllAndSub(name) {
     if (name != undefined && this.isValid(name)) {
-      console.log(name)
-      this.router.navigate(['home',name]);
+      this.errorMessage = 'Grande!'
+      setTimeout(()=>{ this.router.navigate(['home',name]); },1200)
     } else {
       this.imgPcSmile = this.imgAngry;
+      this.errorMessage = 'Hai sbagliato...'
     }
-  }
-
-  mouseHoverLetsGo(){
-    //this.imgPcSmile = this.imgGo;
   }
 
   mouseOutLetsGo(){
     this.imgPcSmile = this.imgPcBackup;
+    this.errorMessage = ' '
   }
 
 }

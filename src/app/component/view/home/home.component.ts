@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChanges } from '@angular/core';
 import AOS from 'aos';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
@@ -13,6 +13,7 @@ export class HomeComponent {
   modality: string = 'Pro mode';
   changeMod: boolean = true;
   name: string;
+
   personalInformation = {
     dimension: {
       height: 460
@@ -77,34 +78,37 @@ export class HomeComponent {
   }
 
   isValid(name) {
-    if (this.pattern.test(name) ) { return true };
+    if (this.pattern.test(name) || name == '#about-me' ) {
+      console.log(name) 
+      return true 
+    }
   }
 
   ngOnInit() {
     
     let nameSplash = this.route.snapshot.paramMap.get('name');
 
-    this.isValid(nameSplash)  ? this.name = this.route.snapshot.paramMap.get('name') : this.goToItems()
-    
+    nameSplash == null ? this.goToLoader() : null
+    this.isValid(nameSplash)  ? this.name = this.route.snapshot.paramMap.get('name') : this.goToLoader()
     this.nameSplashAutoKiller(nameSplash);
-    
     AOS.init();
 
   }
 
   nameSplashAutoKiller(nameSplash){
-   nameSplash == undefined  ? this.goToItems() : null
+   if(nameSplash == null && !this.route.snapshot.paramMap.getAll('#about-me')){
+     console.log('scusa ma devi andartene')
+     this.goToLoader();
+   }
   }
 
-  goToItems() {
+  goToLoader() {
     this.router.navigate(['loader']);
   }
 
   switchModality() {
-
     this.changeMod = !this.changeMod;
     this.changeMod ? this.modality = 'Pro mode' : this.modality = 'Noob mode'
-
   }
 
 

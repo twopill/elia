@@ -31,14 +31,14 @@ $rosa: #EC9192;
 
     .navbar-up {
       z-index: 1;
-
+      
       .title {
         font-size: 20pt;
-        opacity: 0;
+        
       }
 
       .about-and-project {
-        opacity: 0;
+        
         font-weight: 400;
         font-size: 20pt;
 
@@ -51,13 +51,14 @@ $rosa: #EC9192;
       .contacts {
         font-weight: 400;
         font-size: 20pt;
-        color: $acqua;
+        color: $deepBlue;
         padding-left: 13rem;
       }
     }
 
     .navbar {
-
+      background-color: $rosa;
+      border-radius: 50px;
       .title {
         font-size: 20pt;
         color: $deepBlue;
