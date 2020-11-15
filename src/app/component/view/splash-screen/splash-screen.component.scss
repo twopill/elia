@@ -65,8 +65,8 @@ input[type='text']::placeholder:focus{
 
 
 .button-read-me {
-    width: 12rem;
-    height: 4rem;
+    width: 210px;
+    height: 55px;
     border-radius: 118px;
     background: $rosa;
     box-shadow: 5px 4px 0px #012535;
@@ -77,13 +77,19 @@ input[type='text']::placeholder:focus{
     }
 
     .text {
-        font-size: 29px;
+        font-size: 25px;
         color: $deepBlue;
+        
+        line-height: 33px;
     }
 
     input[type='submit']{
         background: none;
         border: none;
+        font-weight: 700;
+        &:focus{
+            outline: none;
+        }
     }
 
 }
@@ -91,6 +97,6 @@ input[type='text']::placeholder:focus{
 .img-seduto{
     width: 15%;
     height: auto;
-    top: 34%;
+    top: 241px;
     left: 56%;
 }

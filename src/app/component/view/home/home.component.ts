@@ -65,9 +65,7 @@ export class HomeComponent {
   }
 
   pattern: RegExp = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.' -]+$/u;
-  isValid(name) {
-    if (this.pattern.test(name)) { return true };
-  }
+  
 
   constructor(private route: ActivatedRoute, private router: Router, { nativeElement }: ElementRef<HTMLImageElement>) {
     const supports = 'loading' in HTMLImageElement.prototype;
@@ -78,11 +76,24 @@ export class HomeComponent {
     
   }
 
+  isValid(name) {
+    if (this.pattern.test(name) ) { return true };
+  }
+
   ngOnInit() {
-    //this.goToItems();
+    
     let nameSplash = this.route.snapshot.paramMap.get('name');
-    this.isValid(nameSplash) ? this.name = this.route.snapshot.paramMap.get('name') : this.goToItems()
+
+    this.isValid(nameSplash)  ? this.name = this.route.snapshot.paramMap.get('name') : this.goToItems()
+    
+    this.nameSplashAutoKiller(nameSplash);
+    
     AOS.init();
+
+  }
+
+  nameSplashAutoKiller(nameSplash){
+   nameSplash == undefined  ? this.goToItems() : null
   }
 
   goToItems() {
