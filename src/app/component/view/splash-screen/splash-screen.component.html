@@ -6,19 +6,23 @@
     </div>
     <div class="row mx-0 pt-5 my-5 justify-content-center">
         <div class="epilogue subtitle">
-            What's your name?       
+            What's your name?
         </div>
     </div>
 
     <div class="row mx-0 justify-content-center">
-        <img src="../../../../assets/elia_seduto_felice.png" alt="" srcset="" class="position-absolute img-seduto">
-        <input type="text" name="" id="" class="inputbox mt-2" maxlength="20" placeholder="Name" [(ngModel)]="name">
+        <img src="{{imgPcSmile}}" alt="" srcset="" class="position-absolute img-seduto">
+        <div class="position-absolute element-text-error robotoMono">{{errorMessage}}</div>
+        <input type="text" name="" id="" class="inputbox mt-2" maxlength="20" placeholder="Name" [(ngModel)]="name"
+            (mouseover)="changeImg()" (mouseout)="out()">
     </div>
+    
     <div class="row mt-5 pt-5 mx-0 justify-content-center">
         <div data-aos="fade-down" class="button-read-me d-flex align-items-center justify-content-center clickable">
             <div class="robotoMono font-weight-bold text noselect">
-              <input type="submit" value="Let's go!" class="" (click)="controllAndSub(name)">
+                <input type="submit" value="Let's go!" class="" (click)="controllAndSub(name)"
+                    (mouseout)="mouseOutLetsGo()">
             </div>
-          </div>
+        </div>
     </div>
 </div>

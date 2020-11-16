@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChanges } from '@angular/core';
 import AOS from 'aos';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { ElementRef } from '@angular/core';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -12,6 +13,7 @@ export class HomeComponent {
   modality: string = 'Pro mode';
   changeMod: boolean = true;
   name: string;
+
   personalInformation = {
     dimension: {
       height: 460
@@ -64,30 +66,61 @@ export class HomeComponent {
   }
 
   pattern: RegExp = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.' -]+$/u;
+  
+
+  constructor(private route: ActivatedRoute, private router: Router, { nativeElement }: ElementRef<HTMLImageElement>) {
+    const supports = 'loading' in HTMLImageElement.prototype;
+
+    if (supports) {
+      nativeElement.setAttribute('loading', 'lazy');
+    }
+    
+  }
+
   isValid(name) {
-    if (this.pattern.test(name)) { return true };
+    if (this.pattern.test(name)) {
+      return true 
+    }
   }
 
-  constructor(private route: ActivatedRoute, private router: Router) {
-
-  }
+  flag:boolean = false;
+  private fragment: string;
 
   ngOnInit() {
-    //this.goToItems();
-    let nameSplash = this.route.snapshot.paramMap.get('name');
-    this.isValid(nameSplash) ? this.name = this.route.snapshot.paramMap.get('name') : this.goToItems()
+    
+    const nameSplash = this.route.snapshot.paramMap.get('name');
+    
+    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
+    this.isValid(nameSplash)  ? this.name = this.route.snapshot.paramMap.get('name') : this.goToLoader()
+    this.nameSplashAutoKiller(nameSplash);
+
     AOS.init();
+
   }
 
-  goToItems() {
+  ngAfterViewInit(): void {
+    try {
+      document.querySelector('#' + this.fragment).scrollIntoView();
+    } catch (e) { }
+  }
+
+  navigateToAboutMe(){
+    this.router.navigate( ['/'], {fragment: 'about-me'});
+  }
+
+  nameSplashAutoKiller(nameSplash){
+   if(nameSplash == null && this.fragment != 'about-me') {
+     this.goToLoader();
+   }
+  }
+
+  goToLoader() {
     this.router.navigate(['loader']);
   }
 
   switchModality() {
-
     this.changeMod = !this.changeMod;
     this.changeMod ? this.modality = 'Pro mode' : this.modality = 'Noob mode'
-
   }
 
 

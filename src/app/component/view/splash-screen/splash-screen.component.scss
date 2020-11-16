@@ -44,7 +44,7 @@ $rosa: #ec9192;
         border-top: none;
         &:focus{
             outline: none;
-            color: $rosa;
+            color: $deepBlue;
             font-size: 25pt;
             font-style: italic;
         }
@@ -65,11 +65,20 @@ input[type='text']::placeholder:focus{
 
 
 .button-read-me {
-    width: 12rem;
-    height: 4rem;
+    width: 210px;
+    height: 55px;
     border-radius: 118px;
     background: $rosa;
     box-shadow: 5px 4px 0px #012535;
+    transition:2.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+    &:hover{
+        
+        background: $deepBlue;        
+        color: $rosa;
+        box-shadow: 5px 4px 0px $rosa;
+
+    }
 
     a {
         color: $deepBlue;
@@ -77,13 +86,25 @@ input[type='text']::placeholder:focus{
     }
 
     .text {
-        font-size: 29px;
+        font-size: 25px;
         color: $deepBlue;
+        
+        line-height: 33px;
+        
     }
 
     input[type='submit']{
         background: none;
         border: none;
+        font-weight: 700;
+        transition:2.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        &:focus{
+            outline: none;
+        }
+        &:hover{
+              
+            color: $rosa;
+        }
     }
 
 }
@@ -91,6 +112,17 @@ input[type='text']::placeholder:focus{
 .img-seduto{
     width: 15%;
     height: auto;
-    top: 34%;
+    top: 241px;
     left: 56%;
+}
+
+
+.element-text-error{
+    top: 241px;
+    left: 64%;
+
+    font-weight: 600;
+    line-height: 33px;
+    font-size: 22px;
+
 }

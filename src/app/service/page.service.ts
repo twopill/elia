@@ -42,7 +42,6 @@ export class PageService {
       if (id == 0) return this.textFirst[i];
       else if (id == 1) return this.textFirst[i];
       else this.route.navigate(['/wip']);
-      console.log('## testo non trovato ##');
     }
   }
 
@@ -52,14 +51,12 @@ export class PageService {
       if (id == 0) return this.textSecond[i];
       else if (id == 1) return this.textSecond[i];
       else this.route.navigate(['/wip']);
-      console.log('## testo non trovato ##');
     }
   }
 
   getImg(id) {
     for (let i = 0; i <= this.img.length; i++) {
       if (id == i) return this.img[i];
-      else console.log('## img non trovato ##');
     }
   }
 
