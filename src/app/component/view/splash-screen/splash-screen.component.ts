@@ -19,10 +19,32 @@ export class SplashScreenComponent implements OnInit {
   imgGo: string  = "../../../../../assets/elia_go.png"
   click: boolean = false;
   errorMessage: string;
+  questionMarkLoop = [];
   constructor(private router: Router) { }
 
   ngOnInit(): void {
     AOS.init();
+
+    setInterval(()=>{
+      if(this.name == null){
+        this.questionMarkLoop.push('?')
+      }
+      if(this.questionMarkLoop.length == 3){
+        this.imgPcSmile = this.imgAngry;
+        this.errorMessage = 'Puoi inserire il tuo nome? Grazie!'
+      }else if(this.questionMarkLoop.length == 8){
+        this.errorMessage = ''
+        setTimeout(()=>{
+          this.errorMessage = 'Non mi fare arrabbiare o te ne pentirai...'
+        },2000 )
+      }else if(this.questionMarkLoop.length == 10){
+        this.errorMessage = 'Ok va bene.'
+        setTimeout(()=>{
+          window.location.href = "https://it.wikipedia.org/wiki/Anagrafe";
+        },2000 )
+      }
+    },4500)
+
   }
 
   isValid(name) {
