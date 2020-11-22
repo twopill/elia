@@ -2,6 +2,14 @@ $deepBlue: #012535;
 $acqua: #BAE2DA;
 $rosa: #EC9192;
 
+@media only screen and (max-width: 1024px){
+  .terminal-view{
+    .row{
+      display: grid!important; //TODO: da sistemare 
+    }
+  }
+}
+
 .bg {
   background-color: $deepBlue;
 
@@ -56,10 +64,15 @@ $rosa: #EC9192;
     .navbar {
       background-color: $rosa;
       border-radius: 50px;
+      box-shadow: 0 0 9px 0px #ec9192ad;
       .title {
         font-size: 20pt;
         color: $deepBlue;
+        transition: 1s ease-in-out forwards;
       }
+      /*&:hover{
+        color: #8c2000;
+      }*/ //TODO: da fixare
 
       .about-and-project {
         font-weight: 400;
@@ -223,6 +236,8 @@ $rosa: #EC9192;
 .justify-content-space{
   justify-content: space-around;
 }
+
+
 
 
 
