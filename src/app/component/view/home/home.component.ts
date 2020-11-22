@@ -1,7 +1,6 @@
-import { Component, SimpleChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import AOS from 'aos';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ElementRef } from '@angular/core';
 @Component({
   selector: 'app-home',
