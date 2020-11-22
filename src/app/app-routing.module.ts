@@ -8,7 +8,7 @@ import { ErrorPageComponent } from './component/view/error-page/error-page.compo
 import { SplashScreenComponent } from './component/view/splash-screen/splash-screen.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'loader', component: SplashScreenComponent },
   { path: 'home/:name', component: HomeComponent },
   { path: 'about8622', component: AboutComponent },
   { path: 'loader', component: SplashScreenComponent},
