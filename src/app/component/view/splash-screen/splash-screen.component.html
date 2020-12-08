@@ -1,12 +1,12 @@
 <div class="bg">
     <div class="row mx-0 pt-5 justify-content-center">
         <div class="epilogue header-title">
-            Elia's portfolio
+            {{pageLabel.title}}
         </div>
     </div>
-    <div class="row mx-0 pt-5 my-5 justify-content-center">
+    <div class="row mx-0 pt-2 my-5 justify-content-center">
         <div class="epilogue subtitle d-flex justify-content-center w-100">
-            What's your name? <div *ngFor="let question of questionMarkLoop">{{ question }}</div>
+            {{pageLabel.subtitle}} <div *ngFor="let question of questionMarkLoop">{{ question }}</div>?
         </div>
     </div>
 

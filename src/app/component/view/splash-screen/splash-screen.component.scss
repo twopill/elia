@@ -126,3 +126,45 @@ input[type='text']::placeholder:focus{
     font-size: 22px;
 
 }
+
+@media only screen and (max-width: 480px) and (min-width: 368px) {
+   .bg{
+       border: none;
+       
+       .header-title{
+            font-size: 47px;
+       }
+
+       .inputbox{
+            width: 50vw;
+       }
+
+       .img-seduto{
+           display: none;
+       }
+
+   }
+}
+
+@media only screen and (max-width: 368px) and (max-width: 480px) {
+    .bg{
+        border: none;
+        
+        .header-title{
+             font-size: 37px;
+        }
+
+        .subtitle{
+            font-size: 28px;
+        }
+ 
+        .inputbox{
+             width: 50vw;
+        }
+ 
+        .img-seduto{
+            display: none;
+        }
+ 
+    }
+ }

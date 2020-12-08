@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import AOS from 'aos';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import splash_screen_data from '../../../json/splash_screen_data.json'
+
 
 @Component({
   selector: 'app-splash-screen',
@@ -20,10 +24,17 @@ export class SplashScreenComponent implements OnInit {
   click: boolean = false;
   errorMessage: string;
   questionMarkLoop = [];
-  constructor(private router: Router) { }
+
+  public pageLabel = {
+    title: null,
+    subtitle: null
+  }
+
+  constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
     AOS.init();
+    this.takeDataApi();
 
     setInterval(()=>{
       if(this.name == null){
@@ -36,15 +47,28 @@ export class SplashScreenComponent implements OnInit {
         this.errorMessage = ''
         setTimeout(()=>{
           this.errorMessage = 'Non mi fare arrabbiare o te ne pentirai...'
-        },2000 )
+        },30000 )
       }else if(this.questionMarkLoop.length == 10){
         this.errorMessage = 'Ok va bene.'
         setTimeout(()=>{
-          window.location.href = "https://it.wikipedia.org/wiki/Anagrafe";
-        },2000 )
+          //window.location.href = "https://it.wikipedia.org/wiki/Anagrafe";
+        },30000 )
       }
-    },4500)
+    },30000)
 
+  }
+
+
+  getData() : Observable<any> {
+    const linkApi = "../../../../../assets/json/splash_screen.json"
+    return this.http.get<any>(linkApi)
+  }
+
+  takeDataApi() {
+    this.getData().subscribe(data=>{
+      this.pageLabel.title = data.title;
+      this.pageLabel.subtitle = data.subtitle;
+    })
   }
 
   isValid(name) {

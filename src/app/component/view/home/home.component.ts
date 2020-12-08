@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import AOS from 'aos';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ElementRef } from '@angular/core';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
