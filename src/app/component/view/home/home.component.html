@@ -2,28 +2,8 @@
   <div class="first-page">
 
     <div class="navbar-up position-absolute w-100 pt-4">
-      <!--<div class="row px-0 py-2 mx-5 navbar">
-        <div class="col-sm-3 d-flex justify-content-center align-items-center">
-          <div class="epilogue font-weight-bold title clickable">Elia's portfolio</div>
-        </div>
-        <div class="col-sm-3 justify-content-center">
-          <div class="epilogue navbar-text clickable d-flex justify-content-center">
-            <a href="#about-me" >About me</a>
-          </div>
-        </div>
-        <div class="col-sm-3 d-contents">
-          <div class="epilogue navbar-text clickable">
-            Projects
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="epilogue navbar-text clickable">
-            Contacts
-          </div>
-        </div>
-      </div>-->
       <div class="row px-0 py-2 mx-5 navbar">
-        <ul class="list-inline w-100  d-flex justify-content-space align-items-end">
+        <ul class="list-inline my-0 w-100  d-flex justify-content-space align-items-end">
           <li class="list-inline-item justify-content-center "><div class="epilogue font-weight-bold title clickable">Elia's portfolio</div></li>
           <li class="list-inline-item justify-content-center "><a href="#about-me" class="epilogue text clickable">About me</a></li>
           <li class="list-inline-item justify-content-center "><div class="epilogue text clickable">Projects</div></li>
@@ -33,12 +13,9 @@
     </div>
     <div data-aos="flip-right" class="space-image">
       <!-- <img src="../../../../assets/colore_img-min.png" class="img" alt="Angular" loading="lazy"> -->
-
     </div>
 
     <div class="polygonAcqua">
-      
-
       <div class="hi-name">
         <div class="row subtitle mx-3 pl-3-1">
           <div class="col-5">
@@ -76,23 +53,25 @@
       <div data-aos="zoom-in"
         class="button-np-mode noselect clickable d-flex justify-content-center align-items-center font-weight-bold text-uppercase"
         (click)="switchModality()">
-        {{modality}}
+        {{ modality }}
       </div>
     </div>
-    <div class="row m-0 h-65 align-items-center" *ngIf="changeMod">
-      <div class="col-4">
-        <div class="px-4">
-          <app-terminal [personalInformation]="personalInformation"></app-terminal>
+    <div class="terminal-view">
+      <div class="row m-0 h-65 align-items-center" *ngIf="changeMod">
+        <div class="col-4">
+          <div class="px-4">
+            <app-terminal [personalInformation]="personalInformation"></app-terminal>
+          </div>
         </div>
-      </div>
-      <div class="col-4">
-        <div class="px-4">
-          <app-terminal [skill]="skill"></app-terminal>
+        <div class="col-4">
+          <div class="px-4">
+            <app-terminal [skill]="skill"></app-terminal>
+          </div>
         </div>
-      </div>
-      <div class="col-4">
-        <div class="px-4">
-          <app-terminal [softWill]="softWill"></app-terminal>
+        <div class="col-4">
+          <div class="px-4">
+            <app-terminal [softWill]="softWill"></app-terminal>
+          </div>
         </div>
       </div>
     </div>
