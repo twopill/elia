@@ -21,6 +21,7 @@ export class SplashScreenComponent implements OnInit {
   imgPcBackup: string = "../../../../assets/elia_pc.png"
   imgAngry: string = "../../../../../assets/elia_angry.png"
   imgGo: string  = "../../../../../assets/elia_go.png"
+  imgFresh: string = "../../../../assets/elia_in_piedi.png"
   click: boolean = false;
   errorMessage: string;
   questionMarkLoop = [];
