@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import AOS from 'aos';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ElementRef } from '@angular/core';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +11,17 @@ import { ElementRef } from '@angular/core';
 })
 export class HomeComponent {
 
+  //icon
+  faPlus = faPlus;
+
   modality: string = 'Pro mode';
   changeMod: boolean = true;
   name: string;
+  header: Array<String> = [
+    'About Me',
+    'Projects',
+    'Contacts'
+  ]
 
   personalInformation = {
     dimension: {
@@ -75,6 +84,10 @@ export class HomeComponent {
       nativeElement.setAttribute('loading', 'lazy');
     }
     
+  }
+  rotate: boolean = false;
+  changeIcon() {
+    this.rotate = !this.rotate;
   }
 
   isValid(name) {

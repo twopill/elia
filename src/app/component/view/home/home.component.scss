@@ -250,6 +250,57 @@ $rosa: #EC9192;
         .title{
           font-size: 16px;
         }
+        
+        .iconRotate{
+          transform: rotate(45deg);
+        }
+        .hi-name{
+          font-size: 38pt;
+          padding-top: 3rem;
+        }
+        .name{
+          background-color: $deepBlue;
+          color:$acqua;
+          box-shadow: 5px 4px 0px $rosa;
+        }
+      }
+      .content-navbar{
+        
+
+        .navbar-mobile-0{
+          border-radius: 20px 0px 0px 0px;
+          width: 100%;
+          background-color: $rosa;
+          
+          &:hover{
+            background-color:#EBAAAB;
+          }
+          
+        }
+
+        .navbar-mobile-1{
+          
+          width: 100%;
+          background-color: $rosa;
+          
+          &:hover{
+            background-color:#EBAAAB;
+          }
+          
+        }
+
+        .navbar-mobile-2{
+          border-radius: 0px 0px 20px 20px;
+          width: 100%;
+          background-color: $rosa;
+          
+          &:hover{
+            background-color:#EBAAAB;
+          }
+          
+        }
+      
+
       }
       .navbar-up{
         display: none;
