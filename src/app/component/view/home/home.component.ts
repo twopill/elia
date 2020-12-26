@@ -11,9 +11,8 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeComponent {
 
-  //icon
+  
   faPlus = faPlus;
-
   modality: string = 'Pro mode';
   changeMod: boolean = true;
   name: string;
